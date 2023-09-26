@@ -1,14 +1,24 @@
 ﻿using Ardalis.ApiEndpoints;
+using Flurl;
+using Flurl.Http;
 
 namespace BoardingService.Checkin;
 
-public class CheckinCaller : EndpointBaseAsync.WithRequest<Request>.WithResult<Response>
+public class CheckinCaller
 {
   // This class calls an endpoint with a flightNr in the query
   // Returns a list of checked in Passengers 
-  
-  public override Task<Response> HandleAsync(Request request, CancellationToken cancellationToken = new CancellationToken())
+
+  // https://flurl.dev/docs/fluent-http/
+  public async Task<Response> HandleAsync(Request request,
+    CancellationToken cancellationToken = new CancellationToken())
   {
+    var person = await "https://api.com" // Base address
+      .AppendPathSegment("request")
+      .SetQueryParams(new { a = 1, b = 2 })
+      .WithOAuthBearerToken("my_oauth_token")
+      .GetJsonAsync<Response>(cancellationToken: cancellationToken);
+
     // TODO: Save passengers to database relating them to the flightNr
     throw new NotImplementedException();
   }
