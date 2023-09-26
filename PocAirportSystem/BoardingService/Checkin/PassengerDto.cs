@@ -1,7 +1,7 @@
 ﻿namespace BoardingService.Checkin;
 
-public class Passenger
+public class PassengerDto
 {
-  public required string PassId { get; set; }
+  public required string PassengerId { get; set; }
   public required string CheckinNr { get; set; }
 }

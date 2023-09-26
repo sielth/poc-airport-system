@@ -2,5 +2,5 @@
 
 public interface IScannerService
 {
-  public bool Scan(BoardingPass boardingPass);
+  public bool Scan(BoardingPassInput boardingPassInput);
 }

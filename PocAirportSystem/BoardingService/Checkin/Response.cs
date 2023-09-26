@@ -2,5 +2,5 @@
 
 public class Response
 {
-  public IEnumerable<Passenger>? Passengers { get; set; }
+  public IEnumerable<PassengerDto>? Passengers { get; set; }
 }
