@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+PocAirportSystem/.idea/.idea.PocAirportSystem/.idea/encodings.xml
+PocAirportSystem/.idea/.idea.PocAirportSystem/.idea/indexLayout.xml
+PocAirportSystem/.idea/.idea.PocAirportSystem/.idea/vcs.xml
