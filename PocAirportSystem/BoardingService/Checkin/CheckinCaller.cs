@@ -1,5 +1,4 @@
-﻿using Ardalis.ApiEndpoints;
-using Flurl;
+﻿using Flurl;
 using Flurl.Http;
 
 namespace BoardingService.Checkin;
@@ -17,7 +16,7 @@ public class CheckinCaller
       .AppendPathSegment("request")
       .SetQueryParams(new { a = 1, b = 2 })
       .WithOAuthBearerToken("my_oauth_token")
-      .GetJsonAsync<Response>(cancellationToken: cancellationToken);
+      .GetJsonAsync<Response>();
 
     // TODO: Save passengers to database relating them to the flightNr
     throw new NotImplementedException();

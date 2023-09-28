@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BoardingService.Models.BoardingAggregate;
 
-namespace BoardingService.Data.Entities;
+namespace BoardingService.Models.PassengerAggregate;
 
 // EF Core entity 
 public class Passenger
