@@ -1,5 +1,6 @@
 using System.Reflection;
 using BoardingService.Data;
+using BoardingService.Gate;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,5 +42,14 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+// Code for testing
+var bus = app.Services.GetRequiredService<IBus>();
+await bus.Publish(new GateAssignedEvent{
+  FlightNr = "TST1234",
+  GateNr = 1,
+  From = DateTime.Now.AddMinutes(-10),
+  To = DateTime.Now
+});
 
 app.Run();

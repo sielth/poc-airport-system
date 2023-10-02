@@ -3,7 +3,7 @@ using Flurl.Http;
 
 namespace BoardingService.Checkin;
 
-public class CheckinCaller
+public class CheckinCaller : ICheckinCaller 
 {
   // This class calls an endpoint with a flightNr in the query
   // Returns a list of checked in Passengers 
@@ -21,4 +21,10 @@ public class CheckinCaller
     // TODO: Save passengers to database relating them to the flightNr
     throw new NotImplementedException();
   }
+}
+
+public interface ICheckinCaller
+{
+  Task<Response> HandleAsync(Request request,
+    CancellationToken cancellationToken = new CancellationToken());
 }
