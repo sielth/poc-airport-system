@@ -8,7 +8,7 @@ public class AppDbContext : DbContext
 {
   public AppDbContext(DbContextOptions<AppDbContext> options) { }
 
-  public DbSet<Boarding> Boardings { get; set; }
+  public DbSet<Boarding?> Boardings { get; set; }
   public DbSet<Passenger> Passengers { get; set; }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)

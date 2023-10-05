@@ -1,14 +1,21 @@
 using System.Reflection;
+using BoardingService.Checkin;
 using BoardingService.Data;
 using BoardingService.Gate;
+using BoardingService.Models.BoardingAggregate;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
 
 // Add services to the container.
+builder.Services.AddTransient<GateAssignedConsumer>();
+builder.Services.AddTransient<ICheckinCaller, CheckinCaller>();
+builder.Services.AddTransient<IBoardingRepository, BoardingRepository>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -22,12 +29,16 @@ builder.Services.AddMassTransit(configurator =>
   configurator.AddConsumers(assembly);
   configurator.UsingRabbitMq((context, factoryConfigurator) =>
   {
-    factoryConfigurator.Host("localhost", "/", h =>
+    factoryConfigurator.Host("localhost", "ucl", h =>
     {
       h.Username("guest");
       h.Password("guest");
     });
     factoryConfigurator.ConfigureEndpoints(context);
+    factoryConfigurator.Publish<GateAssignedEvent>(topologyConfigurator =>
+    {
+      topologyConfigurator.ExchangeType = ExchangeType.Direct;
+    });
   });
 });
 
