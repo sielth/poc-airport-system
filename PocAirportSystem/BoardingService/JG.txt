@@ -1,0 +1,12 @@
+﻿JG.repeat(5, 10, {
+    flightNr: JG.loremIpsum({units: 'words', count: 1}),
+    gate: JG.integer(1, 100),
+    from: JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1)),
+    to: JG.date(new Date(2010, 0, 1), new Date(2015, 0, 1)),
+    passengers: JG.repeat(20, 40, {
+      passengerId: JG.loremIpsum({units: 'words', count: 1}),
+      checkinNr: JG.loremIpsum({units: 'words', count: 1}),
+      flightNr: this.flightNr,
+      status: JG.bool()
+    })
+});

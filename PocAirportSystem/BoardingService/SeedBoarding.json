@@ -1,0 +1,780 @@
+﻿[
+  {
+    "flightNr": "non",
+    "gate": 96,
+    "from": "2012-05-27T20:33:27.452Z",
+    "to": "2012-08-13T03:43:26.178Z",
+    "passengers": [
+      {
+        "passengerId": "mollit",
+        "checkinNr": "fugiat",
+        "status": false
+      },
+      {
+        "passengerId": "veniam",
+        "checkinNr": "occaecat",
+        "status": true
+      },
+      {
+        "passengerId": "nulla",
+        "checkinNr": "commodo",
+        "status": false
+      },
+      {
+        "passengerId": "eiusmod",
+        "checkinNr": "labore",
+        "status": true
+      },
+      {
+        "passengerId": "laborum",
+        "checkinNr": "fugiat",
+        "status": false
+      },
+      {
+        "passengerId": "sint",
+        "checkinNr": "quis",
+        "status": true
+      },
+      {
+        "passengerId": "sint",
+        "checkinNr": "minim",
+        "status": false
+      },
+      {
+        "passengerId": "ut",
+        "checkinNr": "duis",
+        "status": true
+      },
+      {
+        "passengerId": "voluptate",
+        "checkinNr": "voluptate",
+        "status": false
+      },
+      {
+        "passengerId": "exercitation",
+        "checkinNr": "laborum",
+        "status": true
+      },
+      {
+        "passengerId": "laboris",
+        "checkinNr": "amet",
+        "status": true
+      },
+      {
+        "passengerId": "do",
+        "checkinNr": "ea",
+        "status": false
+      },
+      {
+        "passengerId": "ad",
+        "checkinNr": "sunt",
+        "status": true
+      },
+      {
+        "passengerId": "reprehenderit",
+        "checkinNr": "enim",
+        "status": true
+      },
+      {
+        "passengerId": "veniam",
+        "checkinNr": "aute",
+        "status": false
+      },
+      {
+        "passengerId": "qui",
+        "checkinNr": "laboris",
+        "status": false
+      },
+      {
+        "passengerId": "ut",
+        "checkinNr": "culpa",
+        "status": false
+      },
+      {
+        "passengerId": "duis",
+        "checkinNr": "eiusmod",
+        "status": true
+      },
+      {
+        "passengerId": "eu",
+        "checkinNr": "eiusmod",
+        "status": true
+      },
+      {
+        "passengerId": "duis",
+        "checkinNr": "non",
+        "status": false
+      },
+      {
+        "passengerId": "quis",
+        "checkinNr": "dolore",
+        "status": false
+      },
+      {
+        "passengerId": "do",
+        "checkinNr": "ullamco",
+        "status": true
+      },
+      {
+        "passengerId": "irure",
+        "checkinNr": "cupidatat",
+        "status": true
+      }
+    ]
+  },
+  {
+    "flightNr": "anim",
+    "gate": 74,
+    "from": "2013-03-21T18:12:07.898Z",
+    "to": "2010-06-26T04:04:47.065Z",
+    "passengers": [
+      {
+        "passengerId": "minim",
+        "checkinNr": "adipisicing",
+        "status": true
+      },
+      {
+        "passengerId": "deserunt",
+        "checkinNr": "ullamco",
+        "status": true
+      },
+      {
+        "passengerId": "consequat",
+        "checkinNr": "sint",
+        "status": true
+      },
+      {
+        "passengerId": "quis",
+        "checkinNr": "anim",
+        "status": false
+      },
+      {
+        "passengerId": "minim",
+        "checkinNr": "quis",
+        "status": false
+      },
+      {
+        "passengerId": "irure",
+        "checkinNr": "consectetur",
+        "status": true
+      },
+      {
+        "passengerId": "aute",
+        "checkinNr": "in",
+        "status": false
+      },
+      {
+        "passengerId": "excepteur",
+        "checkinNr": "mollit",
+        "status": true
+      },
+      {
+        "passengerId": "officia",
+        "checkinNr": "proident",
+        "status": false
+      },
+      {
+        "passengerId": "excepteur",
+        "checkinNr": "velit",
+        "status": true
+      },
+      {
+        "passengerId": "excepteur",
+        "checkinNr": "amet",
+        "status": false
+      },
+      {
+        "passengerId": "do",
+        "checkinNr": "mollit",
+        "status": true
+      },
+      {
+        "passengerId": "proident",
+        "checkinNr": "fugiat",
+        "status": true
+      },
+      {
+        "passengerId": "ipsum",
+        "checkinNr": "magna",
+        "status": false
+      },
+      {
+        "passengerId": "culpa",
+        "checkinNr": "veniam",
+        "status": false
+      },
+      {
+        "passengerId": "mollit",
+        "checkinNr": "excepteur",
+        "status": false
+      },
+      {
+        "passengerId": "eu",
+        "checkinNr": "deserunt",
+        "status": false
+      },
+      {
+        "passengerId": "consequat",
+        "checkinNr": "dolore",
+        "status": false
+      },
+      {
+        "passengerId": "irure",
+        "checkinNr": "sunt",
+        "status": true
+      },
+      {
+        "passengerId": "labore",
+        "checkinNr": "et",
+        "status": true
+      },
+      {
+        "passengerId": "dolore",
+        "checkinNr": "ad",
+        "status": false
+      },
+      {
+        "passengerId": "nulla",
+        "checkinNr": "tempor",
+        "status": false
+      },
+      {
+        "passengerId": "fugiat",
+        "checkinNr": "minim",
+        "status": true
+      },
+      {
+        "passengerId": "cillum",
+        "checkinNr": "veniam",
+        "status": true
+      }
+    ]
+  },
+  {
+    "flightNr": "deserunt",
+    "gate": 57,
+    "from": "2014-07-28T23:46:22.157Z",
+    "to": "2010-09-09T02:05:23.857Z",
+    "passengers": [
+      {
+        "passengerId": "dolore",
+        "checkinNr": "est",
+        "status": true
+      },
+      {
+        "passengerId": "minim",
+        "checkinNr": "Lorem",
+        "status": true
+      },
+      {
+        "passengerId": "quis",
+        "checkinNr": "est",
+        "status": true
+      },
+      {
+        "passengerId": "voluptate",
+        "checkinNr": "est",
+        "status": true
+      },
+      {
+        "passengerId": "nisi",
+        "checkinNr": "deserunt",
+        "status": true
+      },
+      {
+        "passengerId": "pariatur",
+        "checkinNr": "laboris",
+        "status": false
+      },
+      {
+        "passengerId": "labore",
+        "checkinNr": "ex",
+        "status": true
+      },
+      {
+        "passengerId": "fugiat",
+        "checkinNr": "sunt",
+        "status": false
+      },
+      {
+        "passengerId": "occaecat",
+        "checkinNr": "dolor",
+        "status": true
+      },
+      {
+        "passengerId": "ullamco",
+        "checkinNr": "aute",
+        "status": false
+      },
+      {
+        "passengerId": "non",
+        "checkinNr": "incididunt",
+        "status": true
+      },
+      {
+        "passengerId": "officia",
+        "checkinNr": "mollit",
+        "status": true
+      },
+      {
+        "passengerId": "id",
+        "checkinNr": "tempor",
+        "status": true
+      },
+      {
+        "passengerId": "minim",
+        "checkinNr": "nostrud",
+        "status": true
+      },
+      {
+        "passengerId": "cillum",
+        "checkinNr": "laborum",
+        "status": false
+      },
+      {
+        "passengerId": "consectetur",
+        "checkinNr": "cupidatat",
+        "status": false
+      },
+      {
+        "passengerId": "irure",
+        "checkinNr": "aliqua",
+        "status": false
+      },
+      {
+        "passengerId": "non",
+        "checkinNr": "ut",
+        "status": true
+      },
+      {
+        "passengerId": "proident",
+        "checkinNr": "dolore",
+        "status": true
+      },
+      {
+        "passengerId": "adipisicing",
+        "checkinNr": "occaecat",
+        "status": false
+      },
+      {
+        "passengerId": "id",
+        "checkinNr": "mollit",
+        "status": false
+      }
+    ]
+  },
+  {
+    "flightNr": "qui",
+    "gate": 39,
+    "from": "2012-12-15T18:08:23.419Z",
+    "to": "2014-05-27T01:34:18.625Z",
+    "passengers": [
+      {
+        "passengerId": "id",
+        "checkinNr": "tempor",
+        "status": false
+      },
+      {
+        "passengerId": "et",
+        "checkinNr": "exercitation",
+        "status": true
+      },
+      {
+        "passengerId": "adipisicing",
+        "checkinNr": "exercitation",
+        "status": true
+      },
+      {
+        "passengerId": "eiusmod",
+        "checkinNr": "dolor",
+        "status": false
+      },
+      {
+        "passengerId": "laboris",
+        "checkinNr": "eu",
+        "status": true
+      },
+      {
+        "passengerId": "officia",
+        "checkinNr": "enim",
+        "status": true
+      },
+      {
+        "passengerId": "aliquip",
+        "checkinNr": "incididunt",
+        "status": false
+      },
+      {
+        "passengerId": "ipsum",
+        "checkinNr": "consequat",
+        "status": true
+      },
+      {
+        "passengerId": "adipisicing",
+        "checkinNr": "incididunt",
+        "status": true
+      },
+      {
+        "passengerId": "cupidatat",
+        "checkinNr": "cillum",
+        "status": true
+      },
+      {
+        "passengerId": "eiusmod",
+        "checkinNr": "culpa",
+        "status": false
+      },
+      {
+        "passengerId": "in",
+        "checkinNr": "eu",
+        "status": false
+      },
+      {
+        "passengerId": "magna",
+        "checkinNr": "velit",
+        "status": false
+      },
+      {
+        "passengerId": "mollit",
+        "checkinNr": "irure",
+        "status": false
+      },
+      {
+        "passengerId": "ut",
+        "checkinNr": "et",
+        "status": true
+      },
+      {
+        "passengerId": "est",
+        "checkinNr": "dolor",
+        "status": false
+      },
+      {
+        "passengerId": "irure",
+        "checkinNr": "excepteur",
+        "status": false
+      },
+      {
+        "passengerId": "ullamco",
+        "checkinNr": "ut",
+        "status": true
+      },
+      {
+        "passengerId": "est",
+        "checkinNr": "incididunt",
+        "status": false
+      },
+      {
+        "passengerId": "cillum",
+        "checkinNr": "sunt",
+        "status": false
+      },
+      {
+        "passengerId": "mollit",
+        "checkinNr": "non",
+        "status": false
+      },
+      {
+        "passengerId": "in",
+        "checkinNr": "deserunt",
+        "status": true
+      },
+      {
+        "passengerId": "Lorem",
+        "checkinNr": "sunt",
+        "status": true
+      },
+      {
+        "passengerId": "sit",
+        "checkinNr": "labore",
+        "status": true
+      }
+    ]
+  },
+  {
+    "flightNr": "incididunt",
+    "gate": 8,
+    "from": "2011-09-25T01:22:59.170Z",
+    "to": "2012-02-18T16:42:11.104Z",
+    "passengers": [
+      {
+        "passengerId": "id",
+        "checkinNr": "eiusmod",
+        "status": false
+      },
+      {
+        "passengerId": "occaecat",
+        "checkinNr": "ex",
+        "status": false
+      },
+      {
+        "passengerId": "ut",
+        "checkinNr": "eiusmod",
+        "status": true
+      },
+      {
+        "passengerId": "dolore",
+        "checkinNr": "nulla",
+        "status": false
+      },
+      {
+        "passengerId": "amet",
+        "checkinNr": "ad",
+        "status": false
+      },
+      {
+        "passengerId": "sunt",
+        "checkinNr": "nostrud",
+        "status": true
+      },
+      {
+        "passengerId": "commodo",
+        "checkinNr": "tempor",
+        "status": false
+      },
+      {
+        "passengerId": "non",
+        "checkinNr": "ad",
+        "status": true
+      },
+      {
+        "passengerId": "velit",
+        "checkinNr": "duis",
+        "status": true
+      },
+      {
+        "passengerId": "eiusmod",
+        "checkinNr": "qui",
+        "status": true
+      },
+      {
+        "passengerId": "consequat",
+        "checkinNr": "ipsum",
+        "status": false
+      },
+      {
+        "passengerId": "commodo",
+        "checkinNr": "exercitation",
+        "status": true
+      },
+      {
+        "passengerId": "eiusmod",
+        "checkinNr": "exercitation",
+        "status": true
+      },
+      {
+        "passengerId": "eu",
+        "checkinNr": "labore",
+        "status": true
+      },
+      {
+        "passengerId": "anim",
+        "checkinNr": "eiusmod",
+        "status": true
+      },
+      {
+        "passengerId": "sint",
+        "checkinNr": "quis",
+        "status": true
+      },
+      {
+        "passengerId": "aliquip",
+        "checkinNr": "commodo",
+        "status": false
+      },
+      {
+        "passengerId": "velit",
+        "checkinNr": "esse",
+        "status": false
+      },
+      {
+        "passengerId": "nostrud",
+        "checkinNr": "dolore",
+        "status": false
+      },
+      {
+        "passengerId": "nisi",
+        "checkinNr": "proident",
+        "status": true
+      },
+      {
+        "passengerId": "duis",
+        "checkinNr": "laboris",
+        "status": true
+      }
+    ]
+  },
+  {
+    "flightNr": "veniam",
+    "gate": 94,
+    "from": "2014-08-07T06:05:10.576Z",
+    "to": "2014-08-29T23:20:20.906Z",
+    "passengers": [
+      {
+        "passengerId": "proident",
+        "checkinNr": "sint",
+        "status": true
+      },
+      {
+        "passengerId": "laboris",
+        "checkinNr": "magna",
+        "status": true
+      },
+      {
+        "passengerId": "excepteur",
+        "checkinNr": "dolore",
+        "status": false
+      },
+      {
+        "passengerId": "quis",
+        "checkinNr": "laborum",
+        "status": false
+      },
+      {
+        "passengerId": "enim",
+        "checkinNr": "id",
+        "status": true
+      },
+      {
+        "passengerId": "tempor",
+        "checkinNr": "consectetur",
+        "status": true
+      },
+      {
+        "passengerId": "in",
+        "checkinNr": "cupidatat",
+        "status": true
+      },
+      {
+        "passengerId": "tempor",
+        "checkinNr": "id",
+        "status": true
+      },
+      {
+        "passengerId": "qui",
+        "checkinNr": "sit",
+        "status": false
+      },
+      {
+        "passengerId": "consectetur",
+        "checkinNr": "aliquip",
+        "status": false
+      },
+      {
+        "passengerId": "Lorem",
+        "checkinNr": "enim",
+        "status": false
+      },
+      {
+        "passengerId": "deserunt",
+        "checkinNr": "elit",
+        "status": false
+      },
+      {
+        "passengerId": "culpa",
+        "checkinNr": "sunt",
+        "status": false
+      },
+      {
+        "passengerId": "laborum",
+        "checkinNr": "duis",
+        "status": true
+      },
+      {
+        "passengerId": "eu",
+        "checkinNr": "pariatur",
+        "status": false
+      },
+      {
+        "passengerId": "nisi",
+        "checkinNr": "reprehenderit",
+        "status": true
+      },
+      {
+        "passengerId": "labore",
+        "checkinNr": "aliqua",
+        "status": false
+      },
+      {
+        "passengerId": "aute",
+        "checkinNr": "commodo",
+        "status": true
+      },
+      {
+        "passengerId": "tempor",
+        "checkinNr": "fugiat",
+        "status": false
+      },
+      {
+        "passengerId": "sit",
+        "checkinNr": "adipisicing",
+        "status": false
+      },
+      {
+        "passengerId": "occaecat",
+        "checkinNr": "culpa",
+        "status": false
+      },
+      {
+        "passengerId": "et",
+        "checkinNr": "minim",
+        "status": true
+      },
+      {
+        "passengerId": "reprehenderit",
+        "checkinNr": "dolore",
+        "status": false
+      },
+      {
+        "passengerId": "ullamco",
+        "checkinNr": "tempor",
+        "status": true
+      },
+      {
+        "passengerId": "tempor",
+        "checkinNr": "est",
+        "status": false
+      },
+      {
+        "passengerId": "deserunt",
+        "checkinNr": "tempor",
+        "status": true
+      },
+      {
+        "passengerId": "tempor",
+        "checkinNr": "enim",
+        "status": false
+      },
+      {
+        "passengerId": "id",
+        "checkinNr": "ipsum",
+        "status": true
+      },
+      {
+        "passengerId": "laboris",
+        "checkinNr": "quis",
+        "status": true
+      },
+      {
+        "passengerId": "aute",
+        "checkinNr": "duis",
+        "status": true
+      },
+      {
+        "passengerId": "Lorem",
+        "checkinNr": "incididunt",
+        "status": false
+      },
+      {
+        "passengerId": "eu",
+        "checkinNr": "voluptate",
+        "status": false
+      },
+      {
+        "passengerId": "id",
+        "checkinNr": "ullamco",
+        "status": false
+      }
+    ]
+  }
+]

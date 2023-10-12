@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Ardalis.SharedKernel;
 using BoardingService.Models.BoardingAggregate;
 
 namespace BoardingService.Models.PassengerAggregate;
 
 // EF Core entity 
-public class Passenger
+public class Passenger : EntityBase, IAggregateRoot
 {
   // TODO: Research whether it is normalized and eventually how to tell EF Core they are both primary keys
   [Key] public string? PassengerId { get; set; }
