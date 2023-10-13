@@ -1,7 +1,7 @@
-﻿using Ardalis.Specification.EntityFrameworkCore;
-using Ardalis.SharedKernel;
+﻿using Ardalis.SharedKernel;
+using Ardalis.Specification.EntityFrameworkCore;
 
-namespace BoardingService.Data;
+namespace BoardingService.Infrastructure.Data;
 
 // inherit from Ardalis.Specification type
 public class EfRepository<T> : RepositoryBase<T>, IReadRepository<T>, IRepository<T> where T : class, IAggregateRoot

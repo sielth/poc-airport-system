@@ -8,9 +8,8 @@ namespace BoardingService.Models.PassengerAggregate;
 // EF Core entity 
 public class Passenger : EntityBase, IAggregateRoot
 {
-  // TODO: Research whether it is normalized and eventually how to tell EF Core they are both primary keys
-  [Key] public string? PassengerId { get; set; }
-  [Key] public string? CheckinNr { get; set; }
+  public string? PassengerId { get; set; }
+  public string? CheckinNr { get; set; }
   
   [ForeignKey("FlightNr")] public required string FlightNr { get; set; }
   public Boarding? Boarding { get; set; }

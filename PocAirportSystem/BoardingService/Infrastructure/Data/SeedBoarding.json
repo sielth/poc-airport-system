@@ -1,0 +1,915 @@
+﻿[
+  {
+    "flightNr": "478b492e-303a-4abb-8773-923f6403b5a3",
+    "gate": 84,
+    "from": "2010-07-08T00:12:15.578Z",
+    "to": "2013-12-07T18:33:00.917Z",
+    "passengers": [
+      {
+        "passengerId": "2483da00-e8d0-4ca7-a236-00b5499237da",
+        "checkinNr": "045732ad-96d1-413f-b1ce-5e033879038e",
+        "status": true
+      },
+      {
+        "passengerId": "a1d758b5-4351-45b1-9274-41a356284a08",
+        "checkinNr": "174c5781-966a-42dc-95f0-12b22e3199d5",
+        "status": false
+      },
+      {
+        "passengerId": "b0833ef7-97c4-4156-bf08-d9daae2d116b",
+        "checkinNr": "da74b9f7-82db-46c6-a6fb-31f7e6a9e073",
+        "status": false
+      },
+      {
+        "passengerId": "cd2c0fc2-b896-42c0-9ebd-72b6e5e70bce",
+        "checkinNr": "3d4c8a55-08ff-4cbe-9d52-2bb316982b59",
+        "status": false
+      },
+      {
+        "passengerId": "2f3576c0-fc85-42e1-9713-8dfb6ac6cc81",
+        "checkinNr": "6344be05-2f57-4af6-ad1d-d27f39dd9ffb",
+        "status": true
+      },
+      {
+        "passengerId": "6d87c7ab-f109-4f34-9a6b-495fd50cbac9",
+        "checkinNr": "e4a83f47-df17-45e5-822a-32957e859557",
+        "status": false
+      },
+      {
+        "passengerId": "573e5ef5-bc93-4d43-aa57-6c186812dbdc",
+        "checkinNr": "cc1463a5-bc6c-4da8-b8b9-1dfc9367eb11",
+        "status": true
+      },
+      {
+        "passengerId": "390e78da-3f7e-4fe2-8e37-e21145705c17",
+        "checkinNr": "4a1056c1-ffdd-4ac1-afdc-16cbaace6c3d",
+        "status": false
+      },
+      {
+        "passengerId": "a7440c5d-06fc-43cc-83c3-7bbfeaf21130",
+        "checkinNr": "379d5997-18cb-49cb-be89-437f5600522e",
+        "status": true
+      },
+      {
+        "passengerId": "bbdf327b-ff88-492c-84c4-602377c36d4a",
+        "checkinNr": "d07e74e5-d188-4f27-abd2-efda7579b345",
+        "status": true
+      },
+      {
+        "passengerId": "20189c70-44d5-401d-8120-a83063c6f53c",
+        "checkinNr": "027af06c-3c92-418d-af37-1d8ac9139029",
+        "status": true
+      },
+      {
+        "passengerId": "e4d131d5-0cba-4ad8-a0f0-5200d08eaf8a",
+        "checkinNr": "cccea88f-f182-4626-b1e7-f1efd4850b2a",
+        "status": true
+      },
+      {
+        "passengerId": "435f3644-a84b-4084-bc8e-ac8ba67d3522",
+        "checkinNr": "9619a28e-b1b4-4787-8406-3b3182ff3aa3",
+        "status": true
+      },
+      {
+        "passengerId": "fa5bf59d-67ed-41cc-8b95-8a847b38e969",
+        "checkinNr": "1d107f74-40c2-4a97-b09c-719a4e537bd1",
+        "status": true
+      },
+      {
+        "passengerId": "3493f98e-30b9-4717-9cf2-0072afe0c11a",
+        "checkinNr": "d82c0ef7-5a2c-405f-8cba-acea6ea8462b",
+        "status": true
+      },
+      {
+        "passengerId": "e7179789-8257-4d50-b26f-51abc9f3452f",
+        "checkinNr": "fea34659-aad6-47fe-937d-ebd61f2005c9",
+        "status": false
+      },
+      {
+        "passengerId": "133a952f-50f6-48ea-b33b-354076e748f6",
+        "checkinNr": "e0b5674c-c758-4c20-af35-706eb0b05d54",
+        "status": false
+      },
+      {
+        "passengerId": "a99097b3-6ed3-4a8a-a0a6-ed296359716e",
+        "checkinNr": "ec234226-2559-4f77-8fe4-da289a9da662",
+        "status": true
+      },
+      {
+        "passengerId": "94de3fde-d1b4-4221-9b47-d4386dbc7df7",
+        "checkinNr": "d3736e8c-0751-4b6c-8474-5417577ab8a0",
+        "status": false
+      },
+      {
+        "passengerId": "a8a51f3f-ac05-417d-8a52-9ee76b67beae",
+        "checkinNr": "9443e7a9-7dd5-43f9-9821-eb0fec6d06ff",
+        "status": false
+      },
+      {
+        "passengerId": "8c26e0b4-328f-42b6-9105-6428f95b6743",
+        "checkinNr": "b17f9cc9-c588-4916-8b6a-2c30b5fa3eea",
+        "status": false
+      },
+      {
+        "passengerId": "62e9228c-15c4-4b7d-8d69-0bd13d50ca7b",
+        "checkinNr": "4760da9c-4481-4c66-8b66-0b0dd93048e1",
+        "status": false
+      },
+      {
+        "passengerId": "c7bebdb6-9d4b-4ab5-9720-8c39aaec5a57",
+        "checkinNr": "fb9db64a-2704-4f58-8457-1fc99f9dae97",
+        "status": true
+      },
+      {
+        "passengerId": "9fc88941-d9ed-4cb2-b245-788493259319",
+        "checkinNr": "7ca8ebc3-0fe0-428c-b54b-5c54de84e28b",
+        "status": false
+      },
+      {
+        "passengerId": "0a246dc3-b8e6-49ae-9bb7-d54120fe0490",
+        "checkinNr": "9b2b0c43-5bcc-49d3-86a1-1ba05f680235",
+        "status": false
+      },
+      {
+        "passengerId": "82ba00b7-e4df-4ddd-b979-5c7293278b5e",
+        "checkinNr": "3f43f080-0cb6-4642-aebb-553b6b7d0848",
+        "status": true
+      },
+      {
+        "passengerId": "c61a3336-c0e5-4fb9-a8d5-01f205de5296",
+        "checkinNr": "da1c7b6c-1d25-4196-8a18-fc0d1a99ff31",
+        "status": false
+      },
+      {
+        "passengerId": "6f01154d-933f-41e7-8c1f-7d6279a669a6",
+        "checkinNr": "725c6f14-3a8e-4866-9d82-767422d82eac",
+        "status": true
+      },
+      {
+        "passengerId": "2d954e5e-1e7c-4a9e-b168-1bdca00951b0",
+        "checkinNr": "920884a8-d847-4d4b-b877-85439799b3fa",
+        "status": false
+      },
+      {
+        "passengerId": "a5bf1d4b-8739-4743-9ce3-f630c3072988",
+        "checkinNr": "6c4df89d-6a21-4f9b-af95-36dbfa7ac1a2",
+        "status": false
+      }
+    ]
+  },
+  {
+    "flightNr": "c2ecdd24-c2c1-4db1-b43d-e268847500b2",
+    "gate": 90,
+    "from": "2010-01-24T06:31:18.694Z",
+    "to": "2013-08-30T05:00:11.908Z",
+    "passengers": [
+      {
+        "passengerId": "2cb9969f-e05a-4d5f-942c-5fa3ebdcf7e3",
+        "checkinNr": "52f98723-e583-4b34-bd96-de60e07cd07f",
+        "status": false
+      },
+      {
+        "passengerId": "45224ff8-f186-45ec-9924-e2656240106a",
+        "checkinNr": "d029a6ad-a199-4f69-b900-6be23c6c7642",
+        "status": true
+      },
+      {
+        "passengerId": "dbb83ea6-6ac6-4460-be66-e802b907920a",
+        "checkinNr": "798d9fdc-908a-4e8e-abfd-c8c42deadd61",
+        "status": false
+      },
+      {
+        "passengerId": "1e9d1fb3-5505-4841-a4f3-be3f97edfa30",
+        "checkinNr": "40375b9f-f577-4f93-8c6e-ffe00f443fb7",
+        "status": true
+      },
+      {
+        "passengerId": "5df96257-ac14-4f71-abfd-2e767858f621",
+        "checkinNr": "b1486044-5cd9-4d2b-8117-53dd5ecf1160",
+        "status": false
+      },
+      {
+        "passengerId": "48522439-3cd5-4281-a90f-50c66f07bd0a",
+        "checkinNr": "178a9321-9692-443b-91d8-f1e696b351ae",
+        "status": true
+      },
+      {
+        "passengerId": "71088347-90e7-46e1-8c45-9de8e4df3d70",
+        "checkinNr": "8ab584b0-02d7-40d9-bebe-dd84ea64cd48",
+        "status": false
+      },
+      {
+        "passengerId": "5e088850-b6c3-4213-b75d-86a93532b6b7",
+        "checkinNr": "c1c5dfab-7fce-4923-a483-f2711c3aead4",
+        "status": true
+      },
+      {
+        "passengerId": "ce25282f-685c-4d2e-a51f-831c3dc4fd1f",
+        "checkinNr": "fed3d45f-b780-4575-aca3-a68a8e96d742",
+        "status": true
+      },
+      {
+        "passengerId": "956911c7-c9c0-4fbf-8e98-6b12a911c692",
+        "checkinNr": "e60d83e7-84e0-43cb-aa66-9ab2fdf189e4",
+        "status": true
+      },
+      {
+        "passengerId": "92fed577-e1f0-40d7-a08f-090776151cd0",
+        "checkinNr": "2fed4d75-776b-46aa-bb69-dee0a7b985d5",
+        "status": false
+      },
+      {
+        "passengerId": "77bddae6-2171-4455-a5b2-79a05adf8ba8",
+        "checkinNr": "140baeff-3f33-496b-aaf1-e09476aeb772",
+        "status": false
+      },
+      {
+        "passengerId": "34db8052-0805-4f4c-9a6f-7be9ffd2e344",
+        "checkinNr": "909d5463-06e4-4490-9d47-588834357d5c",
+        "status": false
+      },
+      {
+        "passengerId": "7d9c03b9-581d-48d3-ae4a-adcb6231b635",
+        "checkinNr": "9c277c8a-75a0-452e-89bc-d13ae0d6bfbc",
+        "status": false
+      },
+      {
+        "passengerId": "7250d17f-abe2-47e4-9a29-0f9538141b2f",
+        "checkinNr": "9971a75e-98ab-4ce1-913d-95ae68082922",
+        "status": true
+      },
+      {
+        "passengerId": "549cd3c8-72f4-4320-85bb-5da19f25c64f",
+        "checkinNr": "c96e2f6f-eb34-4a3e-a05e-c6b2697c2a03",
+        "status": false
+      },
+      {
+        "passengerId": "c6d84b34-3b4b-41af-a11b-2b2d49d3c224",
+        "checkinNr": "8ecb4173-8725-4487-9e15-60d43eb80e98",
+        "status": true
+      },
+      {
+        "passengerId": "1afe2a28-dd96-49a9-b2ea-e1290e1fded6",
+        "checkinNr": "a8b81df0-5320-4c55-8f73-8c3367e7782f",
+        "status": false
+      },
+      {
+        "passengerId": "eccfc864-33b9-4204-8cf2-0e5df1b36773",
+        "checkinNr": "0c86efef-efa4-478c-9616-1d3f595a77a5",
+        "status": false
+      },
+      {
+        "passengerId": "2d79979f-df86-49c7-9ca1-6ce3e39494d4",
+        "checkinNr": "7f355977-7ff5-4b46-a0d1-1faf29e80bc4",
+        "status": true
+      },
+      {
+        "passengerId": "e842c574-6b94-4ab0-98a2-3c824a9a7307",
+        "checkinNr": "852a6107-8f7b-460a-bd47-00f4e6179451",
+        "status": true
+      },
+      {
+        "passengerId": "862b5d5c-ec8a-452b-9918-c586e8137d84",
+        "checkinNr": "6dec155f-cbc9-4ae8-9f85-a8cf4c2b399b",
+        "status": false
+      },
+      {
+        "passengerId": "e442875b-3be7-4496-8d36-69240555d224",
+        "checkinNr": "e77162af-c7ec-44bd-8d2e-3e10c68ad594",
+        "status": false
+      }
+    ]
+  },
+  {
+    "flightNr": "0eb773dd-f2b0-4536-9f87-8a68598f9f17",
+    "gate": 86,
+    "from": "2010-08-04T13:06:06.625Z",
+    "to": "2012-06-10T20:31:44.521Z",
+    "passengers": [
+      {
+        "passengerId": "1da898fe-d43d-4728-b412-373a8076b2b4",
+        "checkinNr": "90aaaf48-4a70-4783-9058-92db42f55002",
+        "status": false
+      },
+      {
+        "passengerId": "776139a6-43fb-4546-9fd3-05b6a68d545e",
+        "checkinNr": "d868e334-7477-4f7d-829a-3230dc66beaa",
+        "status": true
+      },
+      {
+        "passengerId": "522b12d8-da63-4d44-965e-b7fa1c714908",
+        "checkinNr": "605b7cdd-357f-4f30-b8dc-a6cfc3d2e453",
+        "status": true
+      },
+      {
+        "passengerId": "887816a9-46f3-450f-b4ba-2cb0d9ea2b2c",
+        "checkinNr": "4b24a0c3-ccc1-490c-ac20-ee54a507204d",
+        "status": false
+      },
+      {
+        "passengerId": "a0dd6f7f-e131-4956-b9d6-c4a8cb244b97",
+        "checkinNr": "f83a2d91-b393-4604-be71-e45083df97fe",
+        "status": false
+      },
+      {
+        "passengerId": "af5a14bd-8b56-4b26-b6bd-3c3c5699a5da",
+        "checkinNr": "23a6749f-874f-4e71-83ff-d035e330f380",
+        "status": true
+      },
+      {
+        "passengerId": "e23f00d8-c160-415c-bb18-66488adb4e20",
+        "checkinNr": "425f484f-9c15-4909-a749-92550a741731",
+        "status": true
+      },
+      {
+        "passengerId": "ac47dade-54c4-4057-8907-9b0f76b0362f",
+        "checkinNr": "f0c8b456-7582-4590-9cde-22bc889c9db9",
+        "status": true
+      },
+      {
+        "passengerId": "10ac95a9-012e-42ef-b305-a915dbc9feef",
+        "checkinNr": "a2f97222-66ca-464c-b07c-40e5f09f9fcc",
+        "status": false
+      },
+      {
+        "passengerId": "134bb04d-35bd-492e-8d83-1db76edee015",
+        "checkinNr": "945171aa-1961-4f99-a01b-f3b4b65980c1",
+        "status": false
+      },
+      {
+        "passengerId": "f13f4618-6381-4a87-9379-322e387559d0",
+        "checkinNr": "2cc836db-fc07-42ab-872d-d8e43704508b",
+        "status": true
+      },
+      {
+        "passengerId": "d20f7773-ecb8-438a-a6c2-4d1f13fa429c",
+        "checkinNr": "a72209c1-7c59-466d-99fd-4b75df7c40ed",
+        "status": true
+      },
+      {
+        "passengerId": "5675cb8c-4dd9-4df6-95b2-050d8e38ca9f",
+        "checkinNr": "293c0653-9b15-431f-887f-c1ca8f855c82",
+        "status": false
+      },
+      {
+        "passengerId": "60d431ca-c571-4da4-9b5f-5d0d183d5d3c",
+        "checkinNr": "80797235-06cc-4726-9a2f-3c4982d15cfe",
+        "status": false
+      },
+      {
+        "passengerId": "43db1000-bcc3-443e-a573-85b412e41765",
+        "checkinNr": "a2a8db48-d185-49e7-96c2-1093ab5745f7",
+        "status": false
+      },
+      {
+        "passengerId": "cfe6b7a9-359d-4c6e-ab69-d040dc9b4dfc",
+        "checkinNr": "1221aa9f-1676-4fb8-9bc6-e111dfb850e4",
+        "status": true
+      },
+      {
+        "passengerId": "b4574dae-b930-4ff7-b7c9-96534c1c0923",
+        "checkinNr": "057876a6-ce5a-4e87-adf9-df19ac0fb539",
+        "status": false
+      },
+      {
+        "passengerId": "cba2e28f-c0e9-40fc-b5a7-940100bc9008",
+        "checkinNr": "2badb556-02c8-4cb7-acca-c2293a361a9c",
+        "status": true
+      },
+      {
+        "passengerId": "ae78d017-7fb1-4597-96e8-d79a47666a88",
+        "checkinNr": "e3f78101-823f-4430-b1f7-e3299ae9ebbc",
+        "status": true
+      },
+      {
+        "passengerId": "9a878386-a431-44ab-bb2a-614e394ea160",
+        "checkinNr": "36333799-648c-41b4-a765-daffc1b2e102",
+        "status": true
+      },
+      {
+        "passengerId": "14987f5a-d0e4-4713-9210-b48a59770e97",
+        "checkinNr": "ef448db0-c98f-4531-bb39-8f1a8b449815",
+        "status": false
+      },
+      {
+        "passengerId": "48cf6f5a-4b57-49c4-a3f5-ead3a2cf76b6",
+        "checkinNr": "8f1e5f19-8386-4359-a03a-99215b1f23f8",
+        "status": true
+      },
+      {
+        "passengerId": "9245a302-5fa2-44c0-bd9e-943e0b026d1c",
+        "checkinNr": "4f3be88f-4609-4226-8157-5b76474bcb87",
+        "status": true
+      },
+      {
+        "passengerId": "12eb5a88-958e-48ac-99d4-7ce2559dcfd0",
+        "checkinNr": "ab512612-1e30-4a47-ab8f-39d97765de05",
+        "status": false
+      },
+      {
+        "passengerId": "6d7f900e-44c5-4af4-af51-d8970226ee84",
+        "checkinNr": "1fa02b70-55b7-485b-a24a-51d9567e172d",
+        "status": true
+      },
+      {
+        "passengerId": "b7bf997d-02f2-4f17-a769-417dea35baf7",
+        "checkinNr": "494dbc63-e43a-4907-a932-6043751e2ac7",
+        "status": false
+      },
+      {
+        "passengerId": "dfc2b57e-ef21-4bfe-b8aa-d63a476f506e",
+        "checkinNr": "f9c6c74f-5cfc-488a-abfc-70c3baa67703",
+        "status": false
+      },
+      {
+        "passengerId": "86778237-e4f6-4f2b-849a-1a7d6d97dafb",
+        "checkinNr": "848d8015-33db-45b6-8253-4ffd688d5116",
+        "status": false
+      },
+      {
+        "passengerId": "10d1c70e-b20e-4898-b27f-b3951d2212f7",
+        "checkinNr": "a9410d65-c46a-4e11-9602-a1d4897f6389",
+        "status": false
+      },
+      {
+        "passengerId": "cca6bf67-cd56-4f79-8fdc-16c65e150eea",
+        "checkinNr": "b930199a-e3e0-46ce-b403-26277c437c88",
+        "status": false
+      },
+      {
+        "passengerId": "917e3de8-0969-4f0d-9875-fe8486b89fa5",
+        "checkinNr": "319dfdfc-2600-4340-9208-b93474167fe8",
+        "status": false
+      }
+    ]
+  },
+  {
+    "flightNr": "d61e7e2e-9749-4d69-a611-e7a54aeaf02e",
+    "gate": 75,
+    "from": "2012-04-08T14:53:04.992Z",
+    "to": "2012-06-11T21:40:47.625Z",
+    "passengers": [
+      {
+        "passengerId": "27b719f4-9eec-4ebd-aca0-673723c2475d",
+        "checkinNr": "eb766351-63d6-48e5-9d42-12679277e15d",
+        "status": true
+      },
+      {
+        "passengerId": "839a9268-10fc-4be7-b509-53695371e4e5",
+        "checkinNr": "31f027f2-0786-4b16-80e3-1cfb7a69f9ea",
+        "status": false
+      },
+      {
+        "passengerId": "4654f72f-ab55-4340-a261-f131d3617488",
+        "checkinNr": "dc7afe32-c606-4798-9b75-61bf28ab6d0a",
+        "status": false
+      },
+      {
+        "passengerId": "646eed75-146d-4c12-a49a-ffb941860bbd",
+        "checkinNr": "d662576d-7d4f-464d-8c01-c85d16a5c0f4",
+        "status": true
+      },
+      {
+        "passengerId": "4b79fdca-3080-4cbb-a126-25f3cf482899",
+        "checkinNr": "7eedec1c-c03e-483c-9b6a-115e85cae64f",
+        "status": true
+      },
+      {
+        "passengerId": "10af4ae8-f5f4-4251-b2e0-f149ccb76321",
+        "checkinNr": "a932f7bf-3df2-4e72-86cc-e879612e465a",
+        "status": true
+      },
+      {
+        "passengerId": "f67a095a-90a5-4e8e-862f-2c0e681a9fd4",
+        "checkinNr": "e993be80-1574-4552-bfb1-9c3e759ab500",
+        "status": false
+      },
+      {
+        "passengerId": "19ebc1a9-eee7-4387-93e0-d059b7158b8f",
+        "checkinNr": "3bdd96ee-1cc0-4f1f-a809-ba94fedbf659",
+        "status": false
+      },
+      {
+        "passengerId": "c5052517-60fc-4bbf-a914-1bdefe403986",
+        "checkinNr": "3ec3047c-68ee-4daf-894f-b792e76a9fc5",
+        "status": false
+      },
+      {
+        "passengerId": "5ff5f40e-6066-4100-95e7-9ea990d48056",
+        "checkinNr": "45e5ad54-28db-4570-ad57-4cf8910ac8f8",
+        "status": false
+      },
+      {
+        "passengerId": "c0452062-94ce-4961-9adf-515b88e591d2",
+        "checkinNr": "83274986-e003-44d9-bae2-e03389d8a599",
+        "status": false
+      },
+      {
+        "passengerId": "c1260881-2a5d-499f-bdfd-3106910d2dd9",
+        "checkinNr": "dd3039d6-e421-4a8f-a1ac-71e1b5269955",
+        "status": false
+      },
+      {
+        "passengerId": "c25d49dc-65b8-4050-9f51-9537c01e45e5",
+        "checkinNr": "686b2f5e-3029-439d-9702-32e943c746e0",
+        "status": true
+      },
+      {
+        "passengerId": "c6b0ddef-480c-4a19-861f-e45390f42ad5",
+        "checkinNr": "4b7c90ae-ab5b-42fb-a9cc-4875dd02a624",
+        "status": false
+      },
+      {
+        "passengerId": "0dc95128-d260-48aa-b83a-cfdf2fa429c2",
+        "checkinNr": "09994b7e-d902-4129-9ba0-52a68e46fd70",
+        "status": false
+      },
+      {
+        "passengerId": "81b1c6c8-d0da-4ea3-80a6-128e7837c1cb",
+        "checkinNr": "6269808c-5133-420e-8c8f-9d8c3a349a49",
+        "status": false
+      },
+      {
+        "passengerId": "fb96ec66-8cea-45b8-b08f-c1c750c79ba4",
+        "checkinNr": "be4b67e4-123d-4f7a-adff-74d548569f22",
+        "status": false
+      },
+      {
+        "passengerId": "b3c427cb-92e7-497c-ac8d-53c6f49cee45",
+        "checkinNr": "7e6d4ba5-a9f3-4b2b-a411-d65e370b6ed7",
+        "status": false
+      },
+      {
+        "passengerId": "43d5609e-ca3d-46b5-aa4c-59f733c35a9a",
+        "checkinNr": "c4245c71-c2ae-4243-8cc3-17a204976ebb",
+        "status": true
+      },
+      {
+        "passengerId": "e82b3f25-a9a6-4fa1-9e0d-4c9a4237b6c3",
+        "checkinNr": "90e486c9-22f1-4255-824f-0baed00e738c",
+        "status": false
+      },
+      {
+        "passengerId": "c683984a-35b2-43c3-b911-d5726bbe6b94",
+        "checkinNr": "db368895-1f4a-45fd-89e4-ade6d1e41883",
+        "status": true
+      },
+      {
+        "passengerId": "ac55f39d-84a5-47ac-bdc1-6ee14e582c58",
+        "checkinNr": "bee2ed8e-5e08-4599-b9fd-882c2060a11b",
+        "status": true
+      },
+      {
+        "passengerId": "07235f50-db67-4977-ab21-f25379a346ad",
+        "checkinNr": "f61edec4-d07c-469b-9695-da60d9704ef0",
+        "status": false
+      },
+      {
+        "passengerId": "5ff62c03-3a99-4679-b806-9bb00aa658ca",
+        "checkinNr": "6e914d46-420c-4228-86ae-5d14907f7adf",
+        "status": true
+      },
+      {
+        "passengerId": "f0881397-97ac-42a4-82ab-fbf4e959e534",
+        "checkinNr": "97189609-3cb3-4975-8d40-6b67a8e91ce2",
+        "status": true
+      }
+    ]
+  },
+  {
+    "flightNr": "75f6e887-a78a-4f12-bb82-eaf6be2ad893",
+    "gate": 21,
+    "from": "2011-02-21T12:46:12.808Z",
+    "to": "2013-02-15T15:58:29.936Z",
+    "passengers": [
+      {
+        "passengerId": "76346740-9f14-4dee-ac42-6a4c055b4eec",
+        "checkinNr": "bad01a75-44cd-4213-8dcf-9726f10124bd",
+        "status": true
+      },
+      {
+        "passengerId": "f978a49f-f1e8-45e5-872d-7fc9045ae1f2",
+        "checkinNr": "a6139fa3-7609-47a2-aab4-44f29d495c80",
+        "status": false
+      },
+      {
+        "passengerId": "4a64a9a8-a4f1-43d6-b8fe-eb1ae2267396",
+        "checkinNr": "3393483d-4af9-4e10-98e5-cd84efd789dc",
+        "status": false
+      },
+      {
+        "passengerId": "9a3754ce-9b3c-4c5a-bc25-4afa28a3378b",
+        "checkinNr": "cfb2af45-b37c-4f59-a117-d144af8fbbf5",
+        "status": true
+      },
+      {
+        "passengerId": "02218fa7-5dd1-423b-9f29-af5cc7584acd",
+        "checkinNr": "ffe452a0-1813-4bfb-91aa-d629166dadb0",
+        "status": false
+      },
+      {
+        "passengerId": "0ad3937e-f030-4746-b504-472bb9dc4b84",
+        "checkinNr": "aed2fd32-f0bd-4b64-a407-9717e43ee095",
+        "status": true
+      },
+      {
+        "passengerId": "d3b62268-1cbf-4159-98af-1fd4d9b32f49",
+        "checkinNr": "3c8de38a-92cb-416c-9bf5-67cb1bf96f96",
+        "status": false
+      },
+      {
+        "passengerId": "b11b6fbb-de2c-4fff-9202-60ac6e6ecd3f",
+        "checkinNr": "80379b42-b4b5-4b28-b7f5-d7ad4d51c39d",
+        "status": true
+      },
+      {
+        "passengerId": "5148febb-28d8-415c-84aa-9819d329912a",
+        "checkinNr": "6e052a7a-013c-401c-a16d-3ba0f9f261eb",
+        "status": false
+      },
+      {
+        "passengerId": "842cedb6-47d4-41bd-8e11-65e83103cda2",
+        "checkinNr": "d5b2e7a0-09ef-4456-8aaa-a2defa5dd846",
+        "status": true
+      },
+      {
+        "passengerId": "01dc5ab1-be90-4422-93f5-6ac9b1b36244",
+        "checkinNr": "019d71f2-ec86-42aa-84b1-2537c45b3cc7",
+        "status": false
+      },
+      {
+        "passengerId": "96f2a6c1-3579-45f8-8a2d-6ba0731779b7",
+        "checkinNr": "4a2e0eab-6586-4077-9a91-5c51b8acb8e8",
+        "status": false
+      },
+      {
+        "passengerId": "0eda8650-7d2f-40b1-a480-2c26a7c8d56c",
+        "checkinNr": "8963762e-2410-4037-80e1-992932edca85",
+        "status": true
+      },
+      {
+        "passengerId": "4cc287c2-9175-4126-88b7-07ae33035ef8",
+        "checkinNr": "fd0b53d2-4a1f-487c-94f4-7f6755720c95",
+        "status": false
+      },
+      {
+        "passengerId": "507cd753-b933-4089-afdf-7d182016381d",
+        "checkinNr": "7f77d1f6-d8df-4996-a3ae-fc860efcd599",
+        "status": false
+      },
+      {
+        "passengerId": "2b79879c-2de7-4877-9ba8-419ea19b1b05",
+        "checkinNr": "41250183-5661-4e86-8f6a-976312c3eda8",
+        "status": true
+      },
+      {
+        "passengerId": "40b99e8a-2d87-4ab6-a86e-7f561ccafd26",
+        "checkinNr": "4a840567-6a13-476b-8d0d-fc58a392a404",
+        "status": true
+      },
+      {
+        "passengerId": "cbfd984f-24a0-4b16-948c-7e167c3ab9c8",
+        "checkinNr": "56ddc333-1a2e-4607-bc33-e704129af161",
+        "status": false
+      },
+      {
+        "passengerId": "10744081-e0b1-47c7-90df-98a9d435cd5f",
+        "checkinNr": "99e7f940-62d8-4aac-99c0-9044a44e2349",
+        "status": false
+      },
+      {
+        "passengerId": "e5241ee9-04dc-435c-b7d2-8d9111869d5b",
+        "checkinNr": "47ef7482-6088-4d23-8e33-4c24d98b3491",
+        "status": false
+      },
+      {
+        "passengerId": "0256b7bc-22b2-47d5-b254-7a80f586e604",
+        "checkinNr": "cdc906ef-2934-415f-94df-ea12d61214c7",
+        "status": true
+      },
+      {
+        "passengerId": "c3aeda6e-18b4-4404-a2f5-6eb7407e5e24",
+        "checkinNr": "81c1d9c8-3ccb-42bd-b755-1b1926f43149",
+        "status": false
+      },
+      {
+        "passengerId": "1fdf2d7f-a664-466e-b946-2595585d456e",
+        "checkinNr": "6fb1b3ac-847e-4449-8ccf-0d241b379144",
+        "status": false
+      },
+      {
+        "passengerId": "4890d20d-3038-4680-a7dd-2722166a7e40",
+        "checkinNr": "d5dc5e48-0e07-480c-a3e5-772ac4992699",
+        "status": false
+      },
+      {
+        "passengerId": "aeb95904-18a8-407c-8983-fcf9fe2bde3c",
+        "checkinNr": "f7cfa4f9-f891-4bbb-a111-fe1bb9b56d1d",
+        "status": false
+      },
+      {
+        "passengerId": "fba0377b-3bbf-49fe-971b-500c8d429f52",
+        "checkinNr": "b4b7af87-e081-4ff8-9782-ffc151485085",
+        "status": true
+      },
+      {
+        "passengerId": "61dc7d95-6ae1-4a50-8f1d-ed91efc1cfe6",
+        "checkinNr": "3ae5979c-89bd-461e-a13d-0be25888a91e",
+        "status": true
+      },
+      {
+        "passengerId": "d7d76fbb-e9c1-49a9-a668-59363509887a",
+        "checkinNr": "e46241be-91f9-447d-855b-4ddc84cc41e6",
+        "status": true
+      },
+      {
+        "passengerId": "82b3a600-d7d0-4c4c-8eb2-116420f8b504",
+        "checkinNr": "9e1cbb40-bd67-494b-8979-8f3fab8d8b41",
+        "status": true
+      },
+      {
+        "passengerId": "b2923752-4003-45ce-a0bf-bd12c5dbf6c4",
+        "checkinNr": "6239c7cb-a670-4c92-a856-28359134694d",
+        "status": false
+      },
+      {
+        "passengerId": "08477f1e-8a79-463d-b037-ff646a87261f",
+        "checkinNr": "37e1f3ab-df93-4cf8-bbbc-39cd1a32264d",
+        "status": true
+      },
+      {
+        "passengerId": "19fb23e3-9c4a-4f27-9bbc-13dad701667f",
+        "checkinNr": "d16046e8-1307-481a-987a-e0864fb590d4",
+        "status": true
+      },
+      {
+        "passengerId": "a3ff5026-8dd8-469a-a020-3194679ed541",
+        "checkinNr": "ae6fef1f-3e46-41cb-b872-6e6b3feb4583",
+        "status": false
+      },
+      {
+        "passengerId": "33b84333-f218-44b6-9264-74c6caab56d3",
+        "checkinNr": "0092788b-2ff0-4547-b1c4-ff3b238eb45e",
+        "status": false
+      },
+      {
+        "passengerId": "6d9682a2-1a5e-4312-95bd-e53386c0dd34",
+        "checkinNr": "2bab1951-e80b-4906-9aa5-13f2ec0b7fd5",
+        "status": false
+      },
+      {
+        "passengerId": "73bcd0a5-06a7-45a9-9ae4-07b4ad719132",
+        "checkinNr": "e48ec800-6e2a-4710-9845-2549c4ee7351",
+        "status": true
+      },
+      {
+        "passengerId": "3f1e5b29-e018-46e1-8abd-b9d5e03176e9",
+        "checkinNr": "6d0dcb8c-e18c-4a54-920f-3ae4551b6f28",
+        "status": true
+      },
+      {
+        "passengerId": "278b3609-86e6-4f9f-b41a-838ae6249601",
+        "checkinNr": "f9b10093-b0da-4712-a81e-19c2cf1c24c7",
+        "status": false
+      }
+    ]
+  },
+  {
+    "flightNr": "2d7b9251-4d4a-4e22-918e-01bb2a03ac5b",
+    "gate": 1,
+    "from": "2012-07-01T08:55:17.802Z",
+    "to": "2010-04-12T17:18:36.519Z",
+    "passengers": [
+      {
+        "passengerId": "af319d99-18c0-47a3-9293-5af399f11322",
+        "checkinNr": "093660a2-487b-4ea2-9f7a-d66643270ebd",
+        "status": true
+      },
+      {
+        "passengerId": "1eb74581-d2d1-444c-ad1f-e6c823832395",
+        "checkinNr": "ca5ecff5-723f-49d7-87a7-55a1be4434cd",
+        "status": false
+      },
+      {
+        "passengerId": "01b33ac8-3c89-4956-822c-700e02aebdbc",
+        "checkinNr": "bcd74720-ec0c-4f15-9d5f-711dcaf80098",
+        "status": true
+      },
+      {
+        "passengerId": "445fa4c6-4dfa-44cf-befa-9b8759e26fba",
+        "checkinNr": "91591d56-114d-454f-99b3-914bee276f41",
+        "status": true
+      },
+      {
+        "passengerId": "11bfe563-6057-495f-8dc7-d2352c1e30f8",
+        "checkinNr": "abfbd989-0867-4a83-9f9c-a68f31c7426d",
+        "status": true
+      },
+      {
+        "passengerId": "0747d721-1992-471c-95d5-1940004889f0",
+        "checkinNr": "14459533-f1cd-4b8b-a7de-38367de50ceb",
+        "status": false
+      },
+      {
+        "passengerId": "244c6665-8373-4272-981b-d8cc1d7c423d",
+        "checkinNr": "05667c7e-ef8b-479e-8907-6b5e3d899136",
+        "status": false
+      },
+      {
+        "passengerId": "6fe15cce-bea9-47ac-8306-4f544b035650",
+        "checkinNr": "4ea20408-9909-4c36-97fb-d8c5690598c0",
+        "status": false
+      },
+      {
+        "passengerId": "3d536ae3-cbd0-4574-8954-89210de2e9dd",
+        "checkinNr": "479f82e7-2b7d-49b6-940c-7d9104b60ad7",
+        "status": true
+      },
+      {
+        "passengerId": "d8aafbc6-2713-4534-be56-42cd3c1676d9",
+        "checkinNr": "05de55c8-2bee-47b4-bfc1-713605a67e04",
+        "status": true
+      },
+      {
+        "passengerId": "0d35605d-d0c8-4e20-8718-5bf95c20750f",
+        "checkinNr": "25b9298b-0658-44cf-bb57-824d562ee30d",
+        "status": true
+      },
+      {
+        "passengerId": "7d59d378-6328-4ff8-997e-7c7e2869b926",
+        "checkinNr": "906b65f5-ee22-448e-aac8-d496dfa6066e",
+        "status": true
+      },
+      {
+        "passengerId": "e59b1d27-470e-4a52-9660-523abea68b82",
+        "checkinNr": "0dedada8-2f3c-479d-be8f-3950b13a9194",
+        "status": true
+      },
+      {
+        "passengerId": "f8540987-3e12-4b95-8b1e-35b2bf95f799",
+        "checkinNr": "580616eb-0661-40a4-9702-61f122c84445",
+        "status": false
+      },
+      {
+        "passengerId": "25b744d0-312c-4377-8a0f-006ee61e645b",
+        "checkinNr": "ef562168-80d9-4002-84b7-dd78354ee8b2",
+        "status": false
+      },
+      {
+        "passengerId": "9c4969df-05c4-4252-b3b3-0da83309265c",
+        "checkinNr": "5288c60f-2a2e-40b6-9324-ecaaab2fce9c",
+        "status": true
+      },
+      {
+        "passengerId": "1747062b-dc31-40e2-a10d-2fbeccda1677",
+        "checkinNr": "fe52aa0c-e0fb-4d9b-bcdb-f9855991dfbf",
+        "status": false
+      },
+      {
+        "passengerId": "5fb72e2a-378e-4cb3-980a-53bd96228b21",
+        "checkinNr": "75d7b863-89ef-4a3f-8a41-d87e3af5fd03",
+        "status": false
+      },
+      {
+        "passengerId": "048c453c-8ef3-471b-9c7c-2b9716a4f611",
+        "checkinNr": "40116e24-ab02-45b1-97be-a63604e5e771",
+        "status": true
+      },
+      {
+        "passengerId": "3589da9e-a264-4b02-ac7d-cb0073ae8ab9",
+        "checkinNr": "75f53f48-5805-4d3d-878e-a967aa8ae510",
+        "status": false
+      },
+      {
+        "passengerId": "9973c236-3c94-4068-95d2-c147848e1460",
+        "checkinNr": "03621966-7f3c-49b7-ac94-98a261bbfd28",
+        "status": true
+      },
+      {
+        "passengerId": "0774bc0e-4da1-4b9d-bc11-8cb1aee8d565",
+        "checkinNr": "e93af613-5eca-4272-b9ff-9990a3ec79ad",
+        "status": true
+      },
+      {
+        "passengerId": "8a012ebd-9309-4e0c-98bb-97f2826ef24d",
+        "checkinNr": "3e1e7639-2318-4677-9cd7-e50c1b58f6b4",
+        "status": true
+      },
+      {
+        "passengerId": "3e49af56-a4c8-4ca5-8969-9283057a4512",
+        "checkinNr": "7cc32817-f9b3-431d-b126-313fbea32cf2",
+        "status": true
+      },
+      {
+        "passengerId": "3a1b297d-b14f-4b3d-a30e-b436c3c59cae",
+        "checkinNr": "9673ec7b-90de-49f3-9d98-f7cc031baf14",
+        "status": true
+      },
+      {
+        "passengerId": "d96ddb46-e71e-4ac2-ac4e-a5522defb98e",
+        "checkinNr": "e73c4aba-e74c-48fe-829f-458830e9422a",
+        "status": true
+      }
+    ]
+  }
+]

@@ -1,16 +1,12 @@
-﻿using BoardingService.Checkin;
+﻿using BoardingService.Infrastructure.Checkin;
 using BoardingService.Models.BoardingAggregate;
 using BoardingService.Models.PassengerAggregate;
 using Mapster;
 using MassTransit;
 
-namespace BoardingService.Gate;
+namespace BoardingService.Infrastructure.Gate.Consumers;
 
-public class Besked2
-{
-}
-
-public class GateAssignedConsumer : IConsumer<GateAssignedEvent>, IConsumer<Besked2>
+public class GateAssignedConsumer : IConsumer<GateAssignedEvent>
 {
   private readonly ICheckinCaller _checkinCaller;
   private readonly IBoardingService _boardingService;
@@ -25,8 +21,7 @@ public class GateAssignedConsumer : IConsumer<GateAssignedEvent>, IConsumer<Besk
   public async Task Consume(ConsumeContext<GateAssignedEvent> context)
   {
     // task 2: get passenger list by flight nr.
-    var request = new Request { FlightNr = context.Message.FlightNr };
-    var response = await _checkinCaller.HandleAsync(request, default);
+    var response = await _checkinCaller.GetPassengersByFlightNrAsync(context.Message.FlightNr);
     var passengerDto = response.Passengers;
 
     // task 3: save to boarding db
@@ -35,11 +30,5 @@ public class GateAssignedConsumer : IConsumer<GateAssignedEvent>, IConsumer<Besk
     boarding.Passengers = passengers;
 
     await _boardingService.AddBoardingAsync(boarding);
-  }
-
-  public Task Consume(ConsumeContext<Besked2> context)
-  {
-    Console.WriteLine("Besked2");
-    return Task.CompletedTask;
   }
 }

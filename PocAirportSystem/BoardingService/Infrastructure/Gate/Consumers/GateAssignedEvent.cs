@@ -1,4 +1,4 @@
-﻿namespace BoardingService.Gate;
+﻿namespace BoardingService.Infrastructure.Gate.Consumers;
 
 public class GateAssignedEvent
 {
