@@ -20,12 +20,12 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<Luggage>()
           .HasKey(luggage => luggage.LuggageId);
+        
         modelBuilder.Entity<Luggage>()
             .HasOne(luggage => luggage.Passenger)
             .WithMany(passenger => passenger.Luggages)
             .HasForeignKey(luggage => new { luggage.PassengerId, luggage.CheckinNr });
-
-
+        
         modelBuilder.Entity<Boarding>()
       .HasKey(boarding => boarding.FlightNr);
 

@@ -9,7 +9,7 @@ namespace BoardingService.Models.LuggageAggregate
 
     {
         [Key] public string? LuggageId { get; set; }
-        public List<Passenger> Passengers { get; set; }
+        public Passenger Passenger { get; set; }
         public string? PassengerId { get; set; }
         public string? CheckinNr { get; set; }
         public required bool Status { get; set; }
