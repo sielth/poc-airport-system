@@ -17,10 +17,10 @@ public class PassengerCheckedinConsumer : IConsumer<PassengerCheckedinEvent>
 
   public async Task Consume(ConsumeContext<PassengerCheckedinEvent> context)
   {
-    Boarding boarding = await _boardingService.GetBoardingByFlightNrAsync(context.Message.FlightNr);
+    var boarding = await _boardingService.GetBoardingByFlightNrAsync(context.Message.FlightNr);
     if (boarding == null)
     {
-      new Boarding { FlightNr = context.Message.FlightNr };
+      boarding = new Boarding { FlightNr = context.Message.FlightNr };
     }
 
     boarding!.Passengers?.Add(new Passenger 

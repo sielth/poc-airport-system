@@ -24,7 +24,7 @@ public class BoardingService : IBoardingService
     ArgumentNullException.ThrowIfNull(boarding);
     return boarding;
   }
-    public async Task<Boarding>? GetBoardingByFlightNrAsync(string flightNr)
+    public async Task<Boarding?> GetBoardingByFlightNrAsync(string flightNr)
     {
       var boarding = await _repository.FirstOrDefaultAsync(
         new BoardingByFlightNr(flightNr));
