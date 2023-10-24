@@ -1,4 +1,4 @@
-﻿namespace BoardingService.Infrastructure.Checkin
+﻿namespace BoardingService.Infrastructure.Checkin.Callers
 {
   public class Request
   {

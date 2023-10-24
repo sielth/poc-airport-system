@@ -2,6 +2,7 @@
 using Ardalis.SharedKernel;
 using Autofac;
 using BoardingService.Infrastructure.Checkin;
+using BoardingService.Infrastructure.Checkin.Callers;
 using BoardingService.Infrastructure.Data;
 using Module = Autofac.Module;
 

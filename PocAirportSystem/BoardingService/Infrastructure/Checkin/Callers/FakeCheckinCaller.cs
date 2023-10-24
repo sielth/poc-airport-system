@@ -1,7 +1,7 @@
 ﻿using BoardingService.Models.PassengerAggregate;
 using Mapster;
 
-namespace BoardingService.Infrastructure.Checkin;
+namespace BoardingService.Infrastructure.Checkin.Callers;
 
 public class FakeCheckinCaller : ICheckinCaller
 {

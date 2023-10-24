@@ -1,4 +1,6 @@
-﻿namespace BoardingService.Infrastructure.Checkin
+﻿using BoardingService.Infrastructure.Checkin.Callers;
+
+namespace BoardingService.Infrastructure.Checkin
 {
   public interface ICheckinCaller
   {
