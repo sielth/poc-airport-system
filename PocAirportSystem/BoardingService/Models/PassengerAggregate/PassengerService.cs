@@ -33,4 +33,6 @@ public class PassengerService : IPassengerService
     ArgumentNullException.ThrowIfNull(passenger);
     return passenger;
   }
+
+  public async void DeletePassengerAsync(Passenger passenger) => await _repository.DeleteAsync(passenger);
 }
