@@ -24,4 +24,13 @@ public class PassengerService : IPassengerService
     passenger.Status = hasBoarded;
     await _repository.UpdateAsync(passenger);
   }
+
+  public async Task<Passenger> GetPassengerByPassengerIdAsync(string passengerId)
+  {
+    var passenger = await _repository.FirstOrDefaultAsync(
+        new PassengerByPassengerIdSpec(passengerId));
+    
+    ArgumentNullException.ThrowIfNull(passenger);
+    return passenger;
+  }
 }
