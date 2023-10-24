@@ -1,4 +1,4 @@
-﻿namespace BoardingService.Infrastructure.Luggage.Consumers
+﻿namespace BoardingService.Infrastructure.LuggageControl.Consumers
 {
     public class Completed
     {

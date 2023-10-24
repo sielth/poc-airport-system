@@ -3,7 +3,7 @@ using BoardingService.Models.LuggageAggregate;
 using BoardingService.Models.PassengerAggregate;
 using MassTransit;
 
-namespace BoardingService.Infrastructure.Luggage.Consumers
+namespace BoardingService.Infrastructure.LuggageControl.Consumers
 {
     public class LuggageCompletedComsumer : IConsumer<Completed>
     {
