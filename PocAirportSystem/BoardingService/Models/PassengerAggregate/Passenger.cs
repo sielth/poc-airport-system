@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Ardalis.SharedKernel;
 using BoardingService.Models.BoardingAggregate;
+using BoardingService.Models.LuggageAggregate;
 
 namespace BoardingService.Models.PassengerAggregate;
 
@@ -15,4 +16,6 @@ public class Passenger : EntityBase, IAggregateRoot
   public Boarding? Boarding { get; set; }
   
   public bool Status { get; set; } // IsBoarded
+
+    public List<Luggage>? Luggages { get; set; }= new List<Luggage>();
 }
