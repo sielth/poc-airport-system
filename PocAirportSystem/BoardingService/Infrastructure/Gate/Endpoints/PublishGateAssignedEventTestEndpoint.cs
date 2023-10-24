@@ -1,7 +1,6 @@
 ﻿using BoardingService.Infrastructure.Gate.Consumers;
 using FastEndpoints;
 using MassTransit;
-using MassTransit.Mediator;
 
 namespace BoardingService.Infrastructure.Gate.Endpoints;
 

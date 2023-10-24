@@ -4,4 +4,5 @@ public interface IBoardingService
 {
   Task<Boarding> AddBoardingAsync(Boarding boarding);
   Task<IEnumerable<Boarding>> ListBoardingsAsync();
+  Task<Boarding> GetBoardingByGateAndDateTimeWithPassengersAsync(int gate, DateTime scanTime);
 }

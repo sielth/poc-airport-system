@@ -14,4 +14,5 @@ public class Boarding : EntityBase, IAggregateRoot
   public required int Gate { get; set; }
   public required DateTime From { get; set; }
   public required DateTime To { get; set; }
+  public required bool Status { get; set; }
 }

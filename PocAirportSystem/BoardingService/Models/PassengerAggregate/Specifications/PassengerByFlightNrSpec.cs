@@ -2,7 +2,7 @@
 
 namespace BoardingService.Models.PassengerAggregate.Specifications;
 
-public class PassengerByFlightNrSpec : Specification<Passenger>
+public sealed class PassengerByFlightNrSpec : Specification<Passenger>
 {
   public PassengerByFlightNrSpec(string flightNr)
   {

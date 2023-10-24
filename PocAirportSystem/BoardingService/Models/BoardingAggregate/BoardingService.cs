@@ -1,4 +1,5 @@
 ﻿using Ardalis.SharedKernel;
+using BoardingService.Models.BoardingAggregate.Specifications;
 
 namespace BoardingService.Models.BoardingAggregate;
 
@@ -15,4 +16,12 @@ public class BoardingService : IBoardingService
     await _repository.AddAsync(boarding);
 
   public async Task<IEnumerable<Boarding>> ListBoardingsAsync() => await _repository.ListAsync();
+  public async Task<Boarding> GetBoardingByGateAndDateTimeWithPassengersAsync(int gate, DateTime scanTime)
+  {
+    var boarding = await _repository.FirstOrDefaultAsync(
+      new BoardingByGateAndDateTimeWithPassengers(gate, scanTime));
+    
+    ArgumentNullException.ThrowIfNull(boarding);
+    return boarding;
+  }
 }

@@ -27,4 +27,8 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Data\SeedBoarding.json" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Infrastructure\Boarding\" />
+    </ItemGroup>
 </Project>

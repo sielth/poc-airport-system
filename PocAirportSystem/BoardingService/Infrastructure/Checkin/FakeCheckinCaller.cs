@@ -18,7 +18,7 @@ public class FakeCheckinCaller : ICheckinCaller
     var passengers = await _passengerService.ListPassengersByFlighNrAsync(flightNr);
     foreach (var passenger in passengers)
     {
-      await _passengerService.UpdatePassengerBoardingStatusAsync(passenger.PassengerId, passenger.CheckinNr,
+      await _passengerService.UpdatePassengerBoardingStatusAsync(passenger,
         hasBoarded: false);
     }
 

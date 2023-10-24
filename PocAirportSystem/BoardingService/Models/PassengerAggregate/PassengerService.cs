@@ -15,10 +15,10 @@ public class PassengerService : IPassengerService
   public async Task<IEnumerable<Passenger>> ListPassengersByFlighNrAsync(string flightNr) =>
     await _repository.ListAsync(new PassengerByFlightNrSpec(flightNr));
 
-  public async Task UpdatePassengerBoardingStatusAsync(string? passengerId, string? checkinNr, bool hasBoarded)
+  public async Task UpdatePassengerBoardingStatusAsync(Passenger passengerToUpdate, bool hasBoarded)
   {
     var passenger = await _repository.FirstOrDefaultAsync(
-      new PassengerByPassengerIdAndCheckinNrSpec(passengerId, checkinNr));
+      new PassengerByPassengerIdAndCheckinNrSpec(passengerToUpdate.PassengerId, passengerToUpdate.CheckinNr));
     ArgumentNullException.ThrowIfNull(passenger);
 
     passenger.Status = hasBoarded;
