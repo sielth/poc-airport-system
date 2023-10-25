@@ -25,14 +25,14 @@ public class PassengerService : IPassengerService
     await _repository.UpdateAsync(passenger);
   }
 
-  public async Task<Passenger> GetPassengerByPassengerIdAsync(string passengerId)
+  public async Task<Passenger> GetPassengerByPassengerIdAsync(string passengerId, string checkinNr)
   {
     var passenger = await _repository.FirstOrDefaultAsync(
-        new PassengerByPassengerIdSpec(passengerId));
+        new PassengerByPassengerIdSpec(passengerId, checkinNr));
     
     ArgumentNullException.ThrowIfNull(passenger);
     return passenger;
   }
 
-  public async void DeletePassengerAsync(Passenger passenger) => await _repository.DeleteAsync(passenger);
+  public async Task DeletePassengerAsync(Passenger passenger) => await _repository.DeleteAsync(passenger);
 }

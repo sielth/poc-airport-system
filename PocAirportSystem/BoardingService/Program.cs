@@ -28,6 +28,7 @@ builder.Services.AddMassTransit(configurator =>
       h.Username("guest");
       h.Password("guest");
     });
+    factoryConfigurator.UseDelayedMessageScheduler();
     factoryConfigurator.ConfigureEndpoints(context);
   });
 });
