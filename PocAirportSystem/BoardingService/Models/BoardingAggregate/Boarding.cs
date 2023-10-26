@@ -11,7 +11,7 @@ public class Boarding : EntityBase, IAggregateRoot
   
   public List<Passenger>? Passengers { get; set; } = new();
   
-  public int? Gate { get; set; }
+  public int? Gate { get; set; } // TODO: rename to GateNr
   public DateTime? From { get; set; }
   public DateTime? To { get; set; }
   public bool? Status { get; set; }
