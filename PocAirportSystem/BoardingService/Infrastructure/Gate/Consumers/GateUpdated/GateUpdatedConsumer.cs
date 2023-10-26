@@ -15,11 +15,8 @@ public class GateUpdatedConsumer : IConsumer<GateUpdatedEvent>
 
   public async Task Consume(ConsumeContext<GateUpdatedEvent> context)
   {
-    // boarding with the old gate nr
-    var boarding = await _boardingService.GetBoardingByFlightNrAsync(context.Message.FlightNr);
-    ArgumentNullException.ThrowIfNull(boarding);
-
-    boarding = context.Message.Adapt<Models.BoardingAggregate.Boarding>();
+    var boarding = context.Message.Adapt<Boarding>();
+    boarding.Gate = context.Message.GateNr; // temp fix
     await _boardingService.UpdateBoardingAsync(boarding);
   }
 }

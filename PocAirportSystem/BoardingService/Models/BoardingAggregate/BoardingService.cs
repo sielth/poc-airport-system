@@ -31,5 +31,16 @@ public class BoardingService : IBoardingService
   
     return boarding;
   }
-  public async Task UpdateBoardingAsync(Boarding boarding) => await _repository.UpdateAsync(boarding);
+  public async Task UpdateBoardingAsync(Boarding boarding) 
+  {
+    var boardingOld = await GetBoardingByFlightNrAsync(boarding.FlightNr);
+    ArgumentNullException.ThrowIfNull(boardingOld);
+    
+    boardingOld.Gate = boarding.Gate;
+    boardingOld.From = boarding.From;
+    boardingOld.To = boarding.To;
+
+    await _repository.UpdateAsync(boardingOld);
+    await _repository.SaveChangesAsync();
+  }
 }
