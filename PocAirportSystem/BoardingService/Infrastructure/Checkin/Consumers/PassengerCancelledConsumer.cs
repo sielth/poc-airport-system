@@ -15,8 +15,8 @@ public class PassengerCancelledConsumer : IConsumer<PassengerCancelledEvent>
   }
   public async Task Consume(ConsumeContext<PassengerCancelledEvent> context)
   {
-    Passenger passenger = await _passengerService.GetPassengerByPassengerIdAsync(context.Message.PassengerId);
+    var passenger = await _passengerService.GetPassengerByPassengerIdAsync(context.Message.PassengerId, context.Message.CheckinNr);
 
-    _passengerService.DeletePassengerAsync(passenger);
+    await _passengerService.DeletePassengerAsync(passenger);
   }
 }

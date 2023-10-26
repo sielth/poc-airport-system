@@ -10,25 +10,26 @@ public class GateAssignedConsumer : IConsumer<GateAssignedEvent>
 {
   private readonly ICheckinCaller _checkinCaller;
   private readonly IBoardingService _boardingService;
+  private readonly IBus _bus;
 
-  public GateAssignedConsumer(ICheckinCaller checkinCaller, IBoardingService boardingService)
+  public GateAssignedConsumer(ICheckinCaller checkinCaller, IBoardingService boardingService, IBus bus)
   {
     _checkinCaller = checkinCaller;
     _boardingService = boardingService;
+    _bus = bus;
   }
 
-  // task 1: consume msg from Gate service
   public async Task Consume(ConsumeContext<GateAssignedEvent> context)
   {
-    // task 2: get passenger list by flight nr.
-    var response = await _checkinCaller.GetPassengersByFlightNrAsync(context.Message.FlightNr);
-    var passengerDto = response.Passengers;
-
-    // task 3: save to boarding db
-    var passengers = passengerDto.Adapt<List<Passenger>>();
     var boarding = context.Message.Adapt<Boarding>();
-    boarding.Passengers = passengers;
-
     await _boardingService.AddBoardingAsync(boarding);
+
+    await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From.AddMinutes(-5),new CheckGateCommand
+    {
+      FlightNr = context.Message.FlightNr,
+      GateNr = context.Message.GateNr,
+      From = context.Message.From,
+      To = context.Message.To
+    });
   }
 }

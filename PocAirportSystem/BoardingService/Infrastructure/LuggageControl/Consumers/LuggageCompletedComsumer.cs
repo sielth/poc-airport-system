@@ -14,7 +14,7 @@ namespace BoardingService.Infrastructure.LuggageControl.Consumers
         }
         public async Task Consume(ConsumeContext<Completed> context)
         {
-            var passenger = await _passengerservice.GetPassengerByPassengerIdAsync(context.Message.PassengerId);
+            var passenger = await _passengerservice.GetPassengerByPassengerIdAsync(context.Message.PassengerId, context.Message.CheckedInNumber);
         }
     }
 }
