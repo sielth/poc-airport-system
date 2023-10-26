@@ -1,5 +1,4 @@
 using BoardingService.Models.BoardingAggregate;
-using Mapster;
 using MassTransit;
 
 namespace BoardingService.Infrastructure.Gate.Consumers.GateUpdated;
@@ -15,8 +14,13 @@ public class GateUpdatedConsumer : IConsumer<GateUpdatedEvent>
 
   public async Task Consume(ConsumeContext<GateUpdatedEvent> context)
   {
-    var boarding = context.Message.Adapt<Boarding>();
-    boarding.Gate = context.Message.GateNr; // temp fix
+    var boarding = new Boarding
+    {
+      FlightNr = context.Message.FlightNr,
+      Gate = context.Message.GateNr,
+      From = context.Message.From.ToUniversalTime(),
+      To = context.Message.To.ToUniversalTime()
+    };
     await _boardingService.UpdateBoardingAsync(boarding);
   }
 }

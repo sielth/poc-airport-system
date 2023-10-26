@@ -36,6 +36,7 @@ public class BoardingService : IBoardingService
     var boardingOld = await GetBoardingByFlightNrAsync(boarding.FlightNr);
     ArgumentNullException.ThrowIfNull(boardingOld);
     
+    // update the old boarding info
     boardingOld.Gate = boarding.Gate;
     boardingOld.From = boarding.From;
     boardingOld.To = boarding.To;
