@@ -35,4 +35,11 @@ public class PassengerService : IPassengerService
   }
 
   public async Task DeletePassengerAsync(Passenger passenger) => await _repository.DeleteAsync(passenger);
+
+    public async Task UpdatePassengerLuggageAsync(Passenger passenger)
+    {   var passengerMatch = await GetPassengerByPassengerIdAsync(passenger.PassengerId,passenger.CheckinNr);
+        passengerMatch = passenger;
+       await _repository.UpdateAsync(passengerMatch);
+       await _repository.SaveChangesAsync();
+    }
 }

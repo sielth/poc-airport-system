@@ -7,6 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Infrastructure\Boarding\**" />
+      <Content Remove="Infrastructure\Boarding\**" />
+      <EmbeddedResource Remove="Infrastructure\Boarding\**" />
+      <None Remove="Infrastructure\Boarding\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Ardalis.SharedKernel" Version="1.3.0" />
         <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="7.0.0" />
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
@@ -26,9 +33,5 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Data\SeedBoarding.json" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Infrastructure\Boarding\Consumers\" />
     </ItemGroup>
 </Project>
