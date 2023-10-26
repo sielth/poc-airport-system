@@ -10,11 +10,21 @@ namespace BoardingService.Infrastructure.LuggageControl.Consumers
         private readonly IPassengerService _passengerservice;
         public LuggageCompletedComsumer(IPassengerService passengerService)
         {
-           _passengerservice = passengerService;
+            _passengerservice = passengerService;
         }
         public async Task Consume(ConsumeContext<Completed> context)
         {
-            var passenger = await _passengerservice.GetPassengerByPassengerIdAsync(context.Message.PassengerId, context.Message.CheckedInNumber);
+            var passenger = await _passengerservice.GetPassengerByPassengerIdAsync
+                (context.Message.PassengerId, context.Message.CheckedInNumber);
+
+            var luggage = new Luggage { 
+                CheckinNr = context.Message.CheckedInNumber,
+                PassengerId = context.Message.PassengerId, 
+                LuggageId = context.Message.BaggageId.ToString(),
+                Status = true };
+            passenger.Luggages.Add(luggage);
+            await _passengerservice.UpdatePassengerLuggageAsync(passenger);
         }
+
     }
 }

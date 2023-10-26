@@ -2,8 +2,9 @@
 
 public interface IPassengerService
 {
-  Task<IEnumerable<Passenger>> ListPassengersByFlighNrAsync(string flightNr);
-  Task UpdatePassengerBoardingStatusAsync(Passenger passenger,  bool hasBoarded);
-  Task<Passenger> GetPassengerByPassengerIdAsync(string messagePassengerId, string checkinNr);
-  Task DeletePassengerAsync(Passenger passenger);
+    Task<IEnumerable<Passenger>> ListPassengersByFlighNrAsync(string flightNr);
+    Task UpdatePassengerBoardingStatusAsync(Passenger passenger, bool hasBoarded);
+    Task<Passenger> GetPassengerByPassengerIdAsync(string messagePassengerId, string checkinNr);
+    Task DeletePassengerAsync(Passenger passenger);
+    Task UpdatePassengerLuggageAsync(Passenger passenger);
 }
