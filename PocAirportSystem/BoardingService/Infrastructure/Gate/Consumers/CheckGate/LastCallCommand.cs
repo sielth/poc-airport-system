@@ -1,4 +1,4 @@
-namespace BoardingService.Infrastructure.Gate.Consumers;
+namespace BoardingService.Infrastructure.Gate.Consumers.CheckGate;
 
 public class LastCallCommand
 {

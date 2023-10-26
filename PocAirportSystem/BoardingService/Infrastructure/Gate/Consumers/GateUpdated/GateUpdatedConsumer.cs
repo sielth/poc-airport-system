@@ -2,7 +2,7 @@ using BoardingService.Models.BoardingAggregate;
 using Mapster;
 using MassTransit;
 
-namespace BoardingService.Infrastructure.Gate.Consumers;
+namespace BoardingService.Infrastructure.Gate.Consumers.GateUpdated;
 
 public class GateUpdatedConsumer : IConsumer<GateUpdatedEvent>
 {
@@ -19,7 +19,7 @@ public class GateUpdatedConsumer : IConsumer<GateUpdatedEvent>
     var boarding = await _boardingService.GetBoardingByFlightNrAsync(context.Message.FlightNr);
     ArgumentNullException.ThrowIfNull(boarding);
 
-    boarding = context.Message.Adapt<Boarding>();
+    boarding = context.Message.Adapt<Models.BoardingAggregate.Boarding>();
     await _boardingService.UpdateBoardingAsync(boarding);
   }
 }

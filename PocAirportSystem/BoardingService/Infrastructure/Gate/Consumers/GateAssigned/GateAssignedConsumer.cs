@@ -1,10 +1,10 @@
 ﻿using BoardingService.Infrastructure.Checkin;
+using BoardingService.Infrastructure.Gate.Consumers.CheckGate;
 using BoardingService.Models.BoardingAggregate;
-using BoardingService.Models.PassengerAggregate;
 using Mapster;
 using MassTransit;
 
-namespace BoardingService.Infrastructure.Gate.Consumers;
+namespace BoardingService.Infrastructure.Gate.Consumers.GateAssigned;
 
 public class GateAssignedConsumer : IConsumer<GateAssignedEvent>
 {
@@ -21,7 +21,7 @@ public class GateAssignedConsumer : IConsumer<GateAssignedEvent>
 
   public async Task Consume(ConsumeContext<GateAssignedEvent> context)
   {
-    var boarding = context.Message.Adapt<Boarding>();
+    var boarding = context.Message.Adapt<Models.BoardingAggregate.Boarding>();
     await _boardingService.AddBoardingAsync(boarding);
 
     await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From.AddMinutes(-5),new CheckGateCommand

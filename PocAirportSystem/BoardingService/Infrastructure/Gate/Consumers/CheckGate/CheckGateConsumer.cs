@@ -1,7 +1,7 @@
 using BoardingService.Models.BoardingAggregate;
 using MassTransit;
 
-namespace BoardingService.Infrastructure.Gate.Consumers;
+namespace BoardingService.Infrastructure.Gate.Consumers.CheckGate;
 
 public class CheckGateConsumer : IConsumer<CheckGateCommand>
 {
@@ -23,10 +23,11 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
     if (boarding is null)
     {
       _logger.LogWarning("Boarding not found");
-    } else if (boarding.Gate == context.Message.GateNr && boarding.From == context.Message.From)
+    } 
+    else if (boarding.Gate == context.Message.GateNr && boarding.From == context.Message.From)
     {
       // schedule gate open
-      await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new UpdateBoardingStatuseEvent
+      await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new UpdateBoardingStatusEvent
       {
         GateNr = context.Message.GateNr,
         GateStatus = GateStatus.Open
@@ -38,12 +39,13 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
         GateNr = context.Message.GateNr
       });
       // schedule gate close
-      await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.To, new UpdateBoardingStatuseEvent
+      await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.To, new UpdateBoardingStatusEvent
       {
         GateNr = context.Message.GateNr,
         GateStatus = GateStatus.Closed
       });
-    } else if (boarding.Gate != context.Message.GateNr || boarding.From != context.Message.From)
+    } 
+    else if (boarding.Gate != context.Message.GateNr || boarding.From != context.Message.From)
     {
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new CheckGateCommand
       {
