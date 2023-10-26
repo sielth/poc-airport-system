@@ -17,7 +17,7 @@ namespace BoardingService.Infrastructure.BoardingControl.Consumers
             _bus = bus;
         }
 
-        public async Task Consume(ConsumeContext<UpdateBoardingStatusEvent> context
+        public async Task Consume(ConsumeContext<UpdateBoardingStatusEvent> context)
         {
 
             var boarding = await _boardingService.GetBoardingByFlightNrAsync
