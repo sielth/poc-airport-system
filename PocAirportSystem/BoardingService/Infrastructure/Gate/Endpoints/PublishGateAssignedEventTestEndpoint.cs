@@ -1,4 +1,5 @@
 ﻿using BoardingService.Infrastructure.Gate.Consumers;
+using BoardingService.Infrastructure.Gate.Consumers.GateAssigned;
 using FastEndpoints;
 using MassTransit;
 

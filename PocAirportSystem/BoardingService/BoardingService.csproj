@@ -29,6 +29,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Infrastructure\Boarding\" />
+      <Folder Include="Infrastructure\Boarding\Consumers\" />
     </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace BoardingService.Infrastructure.Checkin.Consumers;
+﻿namespace BoardingService.BoardingService;
 
-public class PassengerCancelledEvent
+public class PassengerDeniedEvent
 {
   public required string PassengerId { get; set; }
   public required string CheckinNr { get; set; }

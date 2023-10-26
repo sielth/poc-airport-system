@@ -1,12 +1,14 @@
+using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using BoardingService.Infrastructure;
-using BoardingService.Infrastructure.Checkin;
 using BoardingService.Infrastructure.Data;
 using FastEndpoints;
 using FastEndpoints.Swagger;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 var assembly = typeof(Program).Assembly;
 
@@ -28,6 +30,7 @@ builder.Services.AddMassTransit(configurator =>
       h.Username("guest");
       h.Password("guest");
     });
+    factoryConfigurator.UseDelayedMessageScheduler();
     factoryConfigurator.ConfigureEndpoints(context);
   });
 });
@@ -69,11 +72,11 @@ app.UseSwaggerGen();
 app.UseAuthorization();
 app.MapControllers();
 
-if (app.Environment.IsDevelopment())
-{
-  // Seed Database
-  using var scope = app.Services.CreateScope();
-  await SeedData.Initialize(scope.ServiceProvider);
-}
+// if (app.Environment.IsDevelopment())
+// {
+//   // Seed Database
+//   using var scope = app.Services.CreateScope();
+//   await SeedData.Initialize(scope.ServiceProvider);
+// }
 
 app.Run();

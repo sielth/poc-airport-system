@@ -11,7 +11,8 @@ public class ScannerService : IScannerService
   private readonly IBus _bus;
   private readonly ILogger<ScannerService> _logger;
 
-  public ScannerService(IBoardingService boardingService, ILogger<ScannerService> logger, IPassengerService passengerService, IBus bus)
+  public ScannerService(IBoardingService boardingService, ILogger<ScannerService> logger,
+    IPassengerService passengerService, IBus bus)
   {
     _boardingService = boardingService;
     _logger = logger;
@@ -22,7 +23,9 @@ public class ScannerService : IScannerService
   public async Task<bool> Scan(BoardingPassInput boardingPassInput)
   {
     ArgumentNullException.ThrowIfNull(_boardingService);
-    var boarding = await _boardingService.GetBoardingByGateAndDateTimeWithPassengersAsync(boardingPassInput.GateNr, boardingPassInput.ScanTime);
+    var boarding =
+      await _boardingService.GetBoardingByGateAndDateTimeWithPassengersAsync(boardingPassInput.GateNr,
+        boardingPassInput.ScanTime);
 
     var passenger = boarding?.Passengers?
       .Where(passenger => passenger.PassengerId == boardingPassInput.PassengerId &&
@@ -32,23 +35,15 @@ public class ScannerService : IScannerService
     if (passenger is null)
     {
       _logger.LogWarning("Boarding denied");
-      await _bus.Publish(new PassengerDeniedEvent { PassengerId = boardingPassInput.PassengerId});
+      await _bus.Publish(new PassengerDeniedEvent
+        { PassengerId = boardingPassInput.PassengerId, CheckinNr = boardingPassInput.CheckinNr });
       return false;
     }
 
     await _passengerService.UpdatePassengerBoardingStatusAsync(passenger, hasBoarded: true);
-    await _bus.Publish(new PassengerBoardedEvent { PassengerId = boardingPassInput.PassengerId});
+    await _bus.Publish(new PassengerBoardedEvent
+      { PassengerId = boardingPassInput.PassengerId, CheckinNr = boardingPassInput.CheckinNr });
     _logger.LogInformation("Boarding allowed");
     return true;
   }
-}
-
-public class PassengerDeniedEvent
-{
-  public required string PassengerId { get; set; }
-}
-
-public class PassengerBoardedEvent
-{
-  public required string PassengerId { get; set; }
 }
