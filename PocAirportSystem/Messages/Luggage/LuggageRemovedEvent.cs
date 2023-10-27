@@ -1,4 +1,4 @@
-﻿namespace BoardingService.Infrastructure.BoardingControl.Consumers;
+﻿namespace Messages.Luggage;
 
 public class LuggageRemovedEvent
 {

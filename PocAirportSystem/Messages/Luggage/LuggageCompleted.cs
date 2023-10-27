@@ -1,6 +1,6 @@
 ﻿namespace Messages.Luggage;
 
-public class Completed
+public class LuggageCompleted
 {
   public required string PassengerId { get; set; }
   public required int GateNumber { get; set; }

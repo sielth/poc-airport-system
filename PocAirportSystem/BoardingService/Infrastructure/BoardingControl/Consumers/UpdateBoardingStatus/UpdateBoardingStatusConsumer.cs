@@ -1,44 +1,47 @@
-﻿using BoardingService.Infrastructure.Gate.Consumers.CheckGate;
-using BoardingService.Models.BoardingAggregate;
+﻿using BoardingService.Models.BoardingAggregate;
 using BoardingService.Models.PassengerAggregate;
 using MassTransit;
+using Messages;
 using Messages.Boarding;
+using Messages.Luggage;
 
-namespace BoardingService.Infrastructure.BoardingControl.Consumers
+namespace BoardingService.Infrastructure.BoardingControl.Consumers.UpdateBoardingStatus;
+
+public class UpdateBoardingStatusConsumer : IConsumer<UpdateBoardingStatusEvent>
 {
-  public class UpdateBoardingStatusConsumer : IConsumer<UpdateBoardingStatusEvent>
+  private readonly IBoardingService _boardingService;
+  private readonly IPassengerService _passengerService;
+  private readonly IBus _bus;
+
+  public UpdateBoardingStatusConsumer(IBoardingService boardingService, IBus bus, IPassengerService passengerService)
   {
-    private readonly IBoardingService _boardingService;
-    private readonly IBus _bus;
-    private readonly IPassengerService _passengerService;
+    _boardingService = boardingService;
+    _bus = bus;
+    _passengerService = passengerService;
+  }
 
-    public UpdateBoardingStatusConsumer(IBoardingService boardingService, IBus bus, IPassengerService passengerService)
+  public async Task Consume(ConsumeContext<UpdateBoardingStatusEvent> context)
+  {
+    var boarding = await _boardingService.GetBoardingByFlightNrAsync
+      (context.Message.FlightNr);
+
+    if (context.Message.GateStatus is GateStatus.Closed)
     {
-      _boardingService = boardingService;
-      _bus = bus;
-      _passengerService = passengerService;
-    }
+      var unboardedPassengers = boarding!.Passengers!.Where(passenger => passenger.Status = false)
+        .ToList();
+      if (unboardedPassengers.Any() is false) return;
 
-    public async Task Consume(ConsumeContext<UpdateBoardingStatusEvent> context)
-    {
-      var boarding = await _boardingService.GetBoardingByFlightNrAsync
-        (context.Message.FlightNr);
-
-      var unboardedpassenger = boarding?.Passengers?.Where(passenger => passenger.Status = false).ToList();
-      
-      if (unboardedpassenger?.Any() is false) return;
-      
-      foreach (var passenger in unboardedpassenger)
+      foreach (var unboardedPassenger in unboardedPassengers)
       {
-        var luggageIds = new List<string>();
-        foreach (var luggage in passenger?.Luggages)
+        if (unboardedPassenger.Luggages is null || unboardedPassenger.Luggages.Any() is false) continue;
+        foreach (var luggagesToUnboard in unboardedPassenger.Luggages)
         {
-          luggage.Status = false;
-          luggageIds.Add(luggage.LuggageId);
+          luggagesToUnboard.Status = false;
         }
-
-        await _passengerService.UpdatePassengerLuggageAsync(passenger);
-        await _bus.Publish(new LuggageRemovedEvent { PassengerId = passenger.PassengerId, LuggageId = luggageIds });
+        
+        // TODO: Fix and Uncomment
+        // await _luggageService.UpdateLuggageAsync(luggage);
+        // await _bus.Publish(new LuggageRemovedEvent { PassengerId = unboardedPassenger.PassengerId, LuggageId = luggagesToUnboard.LuggageId });
       }
     }
   }
