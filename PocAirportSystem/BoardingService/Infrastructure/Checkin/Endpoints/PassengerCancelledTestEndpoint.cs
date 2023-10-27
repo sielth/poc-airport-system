@@ -19,7 +19,7 @@ public class PassengerCancelledTestEndpoint : Endpoint<CancelPassengerRequest>
     ArgumentNullException.ThrowIfNull(Bus);
     await Bus.Publish(new PassengerCancelledEvent{ // example of the kind of data we get from the check in group
       PassengerId = req.PassengerId,
-      CheckinNr = req.CheckinNr,
+      CheckinNr = req.CheckinNr
     }, ct);
 
     await SendOkAsync(ct);
