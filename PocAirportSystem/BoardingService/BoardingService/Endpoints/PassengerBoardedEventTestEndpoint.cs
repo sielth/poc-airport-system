@@ -1,5 +1,6 @@
 ﻿using FastEndpoints;
 using MassTransit;
+using Messages.Passenger;
 
 namespace BoardingService.BoardingService.Endpoints;
 

@@ -1,4 +1,4 @@
-﻿namespace BoardingService.Infrastructure.Checkin.Consumers;
+﻿namespace Messages.Passenger;
 
 public class PassengerCancelledEvent
 {

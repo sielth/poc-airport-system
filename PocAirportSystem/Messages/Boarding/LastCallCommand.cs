@@ -1,4 +1,4 @@
-namespace BoardingService.Infrastructure.Gate.Consumers.CheckGate;
+namespace Messages.Boarding;
 
 public class LastCallCommand
 {

@@ -1,5 +1,8 @@
 using BoardingService.Models.BoardingAggregate;
 using MassTransit;
+using Messages;
+using Messages.Boarding;
+using Messages.Gate;
 
 namespace BoardingService.Infrastructure.Gate.Consumers.CheckGate;
 
@@ -30,7 +33,8 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new UpdateBoardingStatusEvent
       {
         GateNr = context.Message.GateNr,
-        GateStatus = GateStatus.Open
+        FlightNr = context.Message.FlightNr,
+        GateStatus = GateStatus.Boarding
       });
       // schedule last call
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.To.AddMinutes(-10), new LastCallCommand
@@ -42,6 +46,7 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.To, new UpdateBoardingStatusEvent
       {
         GateNr = context.Message.GateNr,
+        FlightNr = context.Message.FlightNr,
         GateStatus = GateStatus.Closed
       });
     } 

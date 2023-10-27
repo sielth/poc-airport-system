@@ -1,7 +1,8 @@
 ﻿using BoardingService.Models.PassengerAggregate;
 using MassTransit;
+using Messages.Passenger;
 
-namespace BoardingService.Infrastructure.Checkin.Consumers;
+namespace BoardingService.Infrastructure.Checkin.Consumers.PassengerCancelled;
 
 public class PassengerCancelledConsumer : IConsumer<PassengerCancelledEvent>
 {

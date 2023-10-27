@@ -11,11 +11,20 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - '5432:5432'
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'rabbitmq'
-    environment:
-      - RABBITMQ_DEFAULT_VHOST=ucl
-    ports:
-      - '5672:5672'
-      - '15672:15672'
+
+  boardingservice:
+    image: alessiacontenti/boardingservice
+    restart: always
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports: 
+      - '9090:80'
+
+  # rabbitmq:
+  #   image: rabbitmq:3-management-alpine
+  #   container_name: 'rabbitmq'
+  #   environment:
+  #     - RABBITMQ_DEFAULT_VHOST=ucl
+  #   ports:
+  #     - '5672:5672'
+  #     - '15672:15672'

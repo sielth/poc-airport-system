@@ -1,7 +1,4 @@
-﻿using BoardingService.Infrastructure.Gate.Consumers.GateUpdated;
-using MassTransit;
-
-namespace BoardingService.Infrastructure.Gate.Consumers.CheckGate;
+﻿namespace Messages.Boarding;
 
 public class UpdateBoardingStatusEvent
 {

@@ -3,6 +3,7 @@ using BoardingService.Infrastructure.Gate.Consumers.CheckGate;
 using BoardingService.Models.BoardingAggregate;
 using Mapster;
 using MassTransit;
+using Messages.Gate;
 
 namespace BoardingService.Infrastructure.Gate.Consumers.GateAssigned;
 

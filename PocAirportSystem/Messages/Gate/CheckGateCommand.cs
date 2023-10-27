@@ -1,6 +1,6 @@
-namespace BoardingService.Infrastructure.Gate.Consumers.GateUpdated;
+namespace Messages.Gate;
 
-public class GateUpdatedEvent
+public class CheckGateCommand
 {
   public required string FlightNr { get; set; }
   public required int GateNr { get; set; }

@@ -1,8 +1,9 @@
 ﻿using BoardingService.Models.BoardingAggregate;
 using BoardingService.Models.PassengerAggregate;
 using MassTransit;
+using Messages.Passenger;
 
-namespace BoardingService.Infrastructure.Checkin.Consumers;
+namespace BoardingService.Infrastructure.Checkin.Consumers.PassengerCheckedin;
 
 public class PassengerCheckedinConsumer : IConsumer<PassengerCheckedinEvent>
 {

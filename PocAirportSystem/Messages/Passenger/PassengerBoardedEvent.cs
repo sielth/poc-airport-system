@@ -1,6 +1,6 @@
-﻿namespace BoardingService.BoardingService;
+﻿namespace Messages.Passenger;
 
-public class PassengerDeniedEvent
+public class PassengerBoardedEvent
 {
   public required string PassengerId { get; set; }
   public required string CheckinNr { get; set; }

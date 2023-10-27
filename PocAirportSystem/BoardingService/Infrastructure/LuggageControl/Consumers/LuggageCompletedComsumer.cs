@@ -2,6 +2,7 @@
 using BoardingService.Models.LuggageAggregate;
 using BoardingService.Models.PassengerAggregate;
 using MassTransit;
+using Messages.Luggage;
 
 namespace BoardingService.Infrastructure.LuggageControl.Consumers
 {

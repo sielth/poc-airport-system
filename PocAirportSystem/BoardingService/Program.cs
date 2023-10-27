@@ -1,4 +1,3 @@
-using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using BoardingService.Infrastructure;
@@ -7,8 +6,6 @@ using FastEndpoints;
 using FastEndpoints.Swagger;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
 
 var assembly = typeof(Program).Assembly;
 
@@ -25,7 +22,7 @@ builder.Services.AddMassTransit(configurator =>
   configurator.AddConsumers(assembly);
   configurator.UsingRabbitMq((context, factoryConfigurator) =>
   {
-    factoryConfigurator.Host("localhost", "ucl", h =>
+    factoryConfigurator.Host("localhost", h =>
     {
       h.Username("guest");
       h.Password("guest");
@@ -39,8 +36,6 @@ builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument();
 
 builder.Services.AddControllers();
-// builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
 
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
@@ -72,11 +67,11 @@ app.UseSwaggerGen();
 app.UseAuthorization();
 app.MapControllers();
 
-// if (app.Environment.IsDevelopment())
-// {
-//   // Seed Database
-//   using var scope = app.Services.CreateScope();
-//   await SeedData.Initialize(scope.ServiceProvider);
-// }
+if (app.Environment.IsDevelopment())
+{
+  // Seed Database
+  using var scope = app.Services.CreateScope();
+  await SeedData.Initialize(scope.ServiceProvider);
+}
 
 app.Run();

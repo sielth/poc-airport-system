@@ -1,6 +1,7 @@
 ﻿using BoardingService.Models.BoardingAggregate;
 using BoardingService.Models.PassengerAggregate;
 using MassTransit;
+using Messages.Passenger;
 
 namespace BoardingService.BoardingService;
 

@@ -1,7 +1,6 @@
-﻿using BoardingService.Infrastructure.Gate.Consumers;
-using BoardingService.Infrastructure.Gate.Consumers.GateAssigned;
-using FastEndpoints;
+﻿using FastEndpoints;
 using MassTransit;
+using Messages.Gate;
 
 namespace BoardingService.Infrastructure.Gate.Endpoints;
 

@@ -1,5 +1,6 @@
 using BoardingService.Models.BoardingAggregate;
 using MassTransit;
+using Messages.Gate;
 
 namespace BoardingService.Infrastructure.Gate.Consumers.GateUpdated;
 
