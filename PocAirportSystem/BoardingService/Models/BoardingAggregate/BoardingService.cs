@@ -37,7 +37,7 @@ public class BoardingService : IBoardingService
     ArgumentNullException.ThrowIfNull(boardingOld);
     
     // update the old boarding info
-    boardingOld.Gate = boarding.Gate;
+    boardingOld.GateNr = boarding.GateNr;
     boardingOld.From = boarding.From;
     boardingOld.To = boarding.To;
 

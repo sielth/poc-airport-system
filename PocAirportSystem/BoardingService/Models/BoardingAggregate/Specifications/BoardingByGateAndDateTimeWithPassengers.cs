@@ -7,7 +7,7 @@ public sealed class BoardingByGateAndDateTimeWithPassengers : Specification<Boar
   public BoardingByGateAndDateTimeWithPassengers(int gate, DateTime scanTime)
   {
     Query
-      .Where(boarding => boarding.Gate == gate &&
+      .Where(boarding => boarding.GateNr == gate &&
                          (scanTime > boarding.From && scanTime < boarding.To))
       .Include(boarding => boarding.Passengers);
   }

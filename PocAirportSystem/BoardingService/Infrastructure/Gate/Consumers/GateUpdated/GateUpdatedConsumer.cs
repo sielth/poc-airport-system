@@ -18,7 +18,7 @@ public class GateUpdatedConsumer : IConsumer<GateUpdatedEvent>
     var boarding = new Boarding
     {
       FlightNr = context.Message.FlightNr,
-      Gate = context.Message.GateNr,
+      GateNr = context.Message.GateNr,
       From = context.Message.From.ToUniversalTime(),
       To = context.Message.To.ToUniversalTime()
     };

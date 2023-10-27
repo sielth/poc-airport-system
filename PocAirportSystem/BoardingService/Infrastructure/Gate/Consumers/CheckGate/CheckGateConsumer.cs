@@ -27,7 +27,7 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
     {
       _logger.LogWarning("Boarding not found");
     } 
-    else if (boarding.Gate == context.Message.GateNr && boarding.From == context.Message.From)
+    else if (boarding.GateNr == context.Message.GateNr && boarding.From == context.Message.From)
     {
       // schedule gate open
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new UpdateBoardingStatusEvent
@@ -50,7 +50,7 @@ public class CheckGateConsumer : IConsumer<CheckGateCommand>
         GateStatus = GateStatus.Closed
       });
     } 
-    else if (boarding.Gate != context.Message.GateNr || boarding.From != context.Message.From)
+    else if (boarding.GateNr != context.Message.GateNr || boarding.From != context.Message.From)
     {
       await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From, new CheckGateCommand
       {
