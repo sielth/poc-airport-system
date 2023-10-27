@@ -17,7 +17,7 @@ public class PassengerService : IPassengerService
 
   public async Task UpdatePassengerBoardingStatusAsync(Passenger passengerToUpdate, bool hasBoarded)
   {
-    var passenger = await _repository.FirstOrDefaultAsync(
+    var passenger = await _repository.FirstOrDefaultAsync( // TODO: use GetPassengerByPassengerIdAsync instead
       new PassengerByPassengerIdAndCheckinNrSpec(passengerToUpdate.PassengerId, passengerToUpdate.CheckinNr));
     ArgumentNullException.ThrowIfNull(passenger);
 
@@ -28,7 +28,7 @@ public class PassengerService : IPassengerService
   public async Task<Passenger> GetPassengerByPassengerIdAsync(string passengerId, string checkinNr)
   {
     var passenger = await _repository.FirstOrDefaultAsync(
-        new PassengerByPassengerIdSpec(passengerId, checkinNr));
+        new PassengerByPassengerIdSpec(passengerId, checkinNr)); // TODO: use PassengerByPassengerIdAndCheckinNrSpec instead
     
     ArgumentNullException.ThrowIfNull(passenger);
     return passenger;
@@ -36,10 +36,11 @@ public class PassengerService : IPassengerService
 
   public async Task DeletePassengerAsync(Passenger passenger) => await _repository.DeleteAsync(passenger);
 
-    public async Task UpdatePassengerLuggageAsync(Passenger passenger)
-    {   var passengerMatch = await GetPassengerByPassengerIdAsync(passenger.PassengerId,passenger.CheckinNr);
-        passengerMatch = passenger;
-       await _repository.UpdateAsync(passengerMatch);
-       await _repository.SaveChangesAsync();
-    }
+  public async Task UpdatePassengerLuggageAsync(Passenger passenger)
+  {   
+    var passengerMatch = await GetPassengerByPassengerIdAsync(passenger.PassengerId,passenger.CheckinNr);
+    passengerMatch = passenger;
+    await _repository.UpdateAsync(passengerMatch);
+    await _repository.SaveChangesAsync();
+  }
 }

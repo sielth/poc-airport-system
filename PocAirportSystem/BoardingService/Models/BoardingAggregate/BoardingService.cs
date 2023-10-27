@@ -33,6 +33,7 @@ public class BoardingService : IBoardingService
   }
   public async Task UpdateBoardingAsync(Boarding boarding) 
   {
+    ArgumentNullException.ThrowIfNull(boarding.FlightNr);
     var boardingOld = await GetBoardingByFlightNrAsync(boarding.FlightNr);
     ArgumentNullException.ThrowIfNull(boardingOld);
     
