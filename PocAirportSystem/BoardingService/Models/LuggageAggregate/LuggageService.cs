@@ -16,4 +16,15 @@ public class LuggageService : ILuggageService
     await _repository.AddAsync(luggage);
     await _repository.SaveChangesAsync();
   }
+
+  public async Task UpdateLuggageAsync(Luggage luggageToUnboard)
+  {
+    var luggage = await _repository.GetByIdAsync(luggageToUnboard.Id);
+    ArgumentNullException.ThrowIfNull(luggage);
+    
+    luggage.Status = luggageToUnboard.Status;
+
+    await _repository.UpdateAsync(luggage);
+    await _repository.SaveChangesAsync();
+  }
 }

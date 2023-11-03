@@ -3,5 +3,7 @@ namespace Messages;
 public enum GateStatus
 {
   Closed,
-  Boarding
+  Boarding,
+  Assigned,
+  Available,
 }

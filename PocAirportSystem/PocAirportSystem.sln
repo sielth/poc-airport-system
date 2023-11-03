@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardingService", "Boarding
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{FEA0D29C-0B61-48F8-962E-50A7C6850A53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateService", "GateService\GateService.csproj", "{BE1340ED-B52D-438D-95E7-8324E42CDEAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{FEA0D29C-0B61-48F8-962E-50A7C6850A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA0D29C-0B61-48F8-962E-50A7C6850A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA0D29C-0B61-48F8-962E-50A7C6850A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1340ED-B52D-438D-95E7-8324E42CDEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1340ED-B52D-438D-95E7-8324E42CDEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1340ED-B52D-438D-95E7-8324E42CDEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1340ED-B52D-438D-95E7-8324E42CDEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,6 @@
 
 public class LuggageRemovedEvent
 {
-  public required string PassengerId { get; set; }
-  public required List<string> LuggageId { get; set; }
+  public required string? PassengerId { get; set; }
+  public required string? LuggageId { get; set; }
 }
