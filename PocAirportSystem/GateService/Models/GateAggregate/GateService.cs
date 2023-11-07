@@ -11,7 +11,7 @@ public class GateService : IGateService
     _repository = repository;
   }
 
-  public Task<Gate> AddGateAsync(Gate gate)
+  public Task AddGateAsync(Gate gate)
   {
     throw new NotImplementedException();
   }
@@ -27,6 +27,16 @@ public class GateService : IGateService
   }
 
   public Task<Gate> GetAvailableGateAsync()
+  {
+    throw new NotImplementedException();
+  }
+
+  public Task<Gate?> GetGateByFlightNrAsync(string flightNr)
+  {
+    throw new NotImplementedException();
+  }
+
+  public Task FreeGateAsync(int gateNr)
   {
     throw new NotImplementedException();
   }

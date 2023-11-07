@@ -11,11 +11,14 @@ public class UpdateBoardingStatusConsumer : IConsumer<UpdateBoardingStatusEvent>
 {
   private readonly IBoardingService _boardingService;
   private readonly ILuggageService _luggageService;
+  private readonly ILogger<UpdateBoardingStatusConsumer> _logger;
 
-  public UpdateBoardingStatusConsumer(IBoardingService boardingService, ILuggageService luggageService)
+  public UpdateBoardingStatusConsumer(IBoardingService boardingService, ILuggageService luggageService,
+    ILogger<UpdateBoardingStatusConsumer> logger)
   {
     _boardingService = boardingService;
     _luggageService = luggageService;
+    _logger = logger;
   }
 
   public async Task Consume(ConsumeContext<UpdateBoardingStatusEvent> context)
@@ -26,6 +29,9 @@ public class UpdateBoardingStatusConsumer : IConsumer<UpdateBoardingStatusEvent>
     switch (context.Message.GateStatus)
     {
       case GateStatus.Boarding:
+        _logger.LogInformation("Boarding open for FlightNr {FlightNr} and Gate {GateNr}...", 
+          context.Message.FlightNr,
+          context.Message.GateNr);
         return;
       case GateStatus.Closed:
       {

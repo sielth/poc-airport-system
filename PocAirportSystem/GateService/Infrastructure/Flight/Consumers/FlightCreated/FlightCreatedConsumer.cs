@@ -1,6 +1,4 @@
-﻿using GateService.Models.DelaysAggregate;
-using GateService.Models.GateAggregate;
-using MassTransit;
+﻿using MassTransit;
 using Messages.Flight;
 using Messages.Gate;
 
@@ -8,43 +6,26 @@ namespace GateService.Infrastructure.Flight.Consumers.FlightCreated;
 
 public class FlightCreatedConsumer : IConsumer<FlightCreatedEvent>
 {
-  private readonly IDelayService _delayService;
-  private readonly IGateService _gateService;
+  private readonly IHostEnvironment _environment;
 
-  public FlightCreatedConsumer(IDelayService delayService, IGateService gateService)
+  public FlightCreatedConsumer(IHostEnvironment environment)
   {
-    _delayService = delayService;
-    _gateService = gateService;
+    _environment = environment;
   }
 
   public async Task Consume(ConsumeContext<FlightCreatedEvent> context)
   {
     const int thresholdMinutes = 90;
-    var timeDifference = context.Message.DepartureDate - DateTime.Now;
-    if (timeDifference.TotalMinutes > thresholdMinutes)
-    {
-      await context.SchedulePublish(context.Message.DepartureDate.AddMinutes(-thresholdMinutes), context.Message);
-    }
+    var scheduledTime = context.Message.DepartureDate.AddMinutes(-thresholdMinutes);
     
-    var delay = await _delayService.GetDelayByFlightNrAsync(context.Message.FlightId.ToString());
-    if (delay is null) // Flight is still on time
-    {
-      var gate = await _gateService.GetAvailableGateAsync();
-      ArgumentNullException.ThrowIfNull(gate); // TODO: No more gates available! Handle in a different way!
-
-      await context.SchedulePublish(context.Message.DepartureDate.AddMinutes(-60), new GateAssignedEvent
+    if (_environment.IsDevelopment()) scheduledTime = DateTime.Now.AddSeconds(5);
+    
+    await context.SchedulePublish(scheduledTime,
+      new AssignGateCommand
       {
-        From = context.Message.DepartureDate.AddMinutes(-60),
-        To = context.Message.DepartureDate,
-        FlightNr = context.Message.FlightId.ToString(),
-        GateNr = gate.GateNr!.Value
+        GateStartTime = context.Message.DepartureDate.AddMinutes(-thresholdMinutes),
+        GateEndTime = context.Message.DepartureDate,
+        FlightNr = context.Message.FlightId.ToString()
       });
-
-      await _delayService.DeleteDelayByFlightNrAsync(context.Message.FlightId.ToString());
-    }
-    else
-    {
-      
-    }
   }
 }

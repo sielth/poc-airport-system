@@ -21,8 +21,8 @@ public class PublishGateAssignedEventTestEndpoint : EndpointWithoutRequest
     {
       FlightNr = "0eb773dd-f2b0-4536-9f87-8a68598f9f17",
       GateNr = 86,
-      From = DateTime.Now.AddMinutes(-10),
-      To = DateTime.Now
+      GateStartTime = DateTime.Now.AddMinutes(-10),
+      GateEndTime = DateTime.Now
     }, ct);
 
     await SendOkAsync(ct);

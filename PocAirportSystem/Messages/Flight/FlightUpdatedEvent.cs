@@ -1,6 +1,6 @@
 ﻿namespace Messages.Flight;
 
-public class FlightCreatedEvent
+public class FlightUpdatedEvent
 {
   public Guid? Id { get; set; }
   public string? ToLocation { get; set; }
