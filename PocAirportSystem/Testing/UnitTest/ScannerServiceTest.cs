@@ -10,19 +10,23 @@ namespace Testing.UnitTest;
 
 public class ScannerServiceTest
 {
-  private readonly IBoardingService _boardingServiceSub = Substitute.For<IBoardingService>();
-  private readonly IBus _busSub = Substitute.For<IBus>();
-  private readonly ILogger<ScannerService> _loggerSub = Substitute.For<ILogger<ScannerService>>();
-  private readonly IPassengerService _passengerServiceSub = Substitute.For<IPassengerService>();
-  private readonly IScannerService _scannerServiceSub;
+  private readonly IBoardingService _boardingService;
+  private readonly IBus _bus;
+  private readonly ILogger<ScannerService> _logger;
+  private readonly IPassengerService _passengerService;
+  private readonly IScannerService _scannerService;
 
   public ScannerServiceTest()
   {
-    _scannerServiceSub = new ScannerService(_boardingServiceSub, _loggerSub, _passengerServiceSub, _busSub);
+    _boardingService = Substitute.For<IBoardingService>();
+    _logger = Substitute.For<ILogger<ScannerService>>();
+    _passengerService = Substitute.For<IPassengerService>();
+    _bus = Substitute.For<IBus>();
+    _scannerService = new ScannerService(_boardingService, _logger, _passengerService, _bus);
   }
 
   [Fact]
-  public async Task TestScan()
+  public async Task ScannerService_Scan_UnitTest()
   {
     // Arrange
     var passenger = new Passenger
@@ -34,22 +38,25 @@ public class ScannerServiceTest
     var boarding = new Boarding
     {
       FlightNr = passenger.FlightNr,
-      GateNr = 100,
+      Passengers = new List<Passenger>(),
+      GateNr = new Random().Next(0,100),
       From = DateTime.UtcNow
     };
-    boarding.Passengers?.Add(passenger);
+    boarding.Passengers.Add(passenger);
+    
     var boardingPass = new BoardingPassInput
     {
+      PassengerId = passenger.PassengerId,
       CheckinNr = passenger.CheckinNr,
       GateNr = (int)boarding.GateNr,
-      PassengerId = passenger.PassengerId,
       ScanTime = (DateTime)boarding.From
     };
-
-    await _boardingServiceSub.AddBoardingAsync(boarding);
-
+    
+    _boardingService.GetBoardingByGateAndDateTimeWithPassengersAsync(boardingPass.GateNr, boardingPass.ScanTime)
+      .Returns(boarding);
+        
     // Act
-    var scan = await _scannerServiceSub.Scan(boardingPass);
+    var scan = await _scannerService.Scan(boardingPass);
 
     // Assert
     Assert.True(scan);
