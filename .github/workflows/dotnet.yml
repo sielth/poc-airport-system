@@ -31,6 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Check
+      run: ls
     - name: Build the Docker image
       working-directory: PocAirportSystem/BoardingService
       run: docker build . --file Dockerfile --tag alessiacontenti/boardingservice:$(date +%s)
