@@ -7,16 +7,33 @@ using GateService.Infrastructure.Flight.Consumers.FlightUpdated;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
 
 var assembly = typeof(Program).Assembly;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog((ctx, lc) => lc
+  .ReadFrom.Configuration(builder.Configuration)
+  .Enrich.FromLogContext()
+  .Enrich.WithProperty("Application", assembly.GetName().Name)
+  .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+  .WriteTo.Console()
+  .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(builder.Configuration["ElasticConfiguration:Uri"] 
+                                                              ?? throw new InvalidOperationException()))
+  {
+    IndexFormat = $"{assembly.GetName().Name?.ToLower()}-logs-{builder.Environment.EnvironmentName.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}",
+    AutoRegisterTemplate = true,
+    NumberOfShards = 2,
+    NumberOfReplicas = 1
+  }));
+
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
-// var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
-// builder.Services.AddDbContext<AppDbContext>(options =>
-//   options.UseNpgsql(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
+builder.Services.AddDbContext<AppDbContext>(options =>
+  options.UseNpgsql(connectionString));
 
 builder.Services.AddMassTransit(configurator =>
 {
