@@ -23,16 +23,21 @@ jobs:
       run: dotnet restore **/*.sln
     - name: Build
       run: dotnet build **/*.sln --no-restore
-    - name: Check
-      run: ls
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifact
+        path: PocAirportSystem/BoardingService/bin/Debug/net7.0
   docker:
     name: docker
     needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Check
-      run: ls
+    - name: Download build artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: build-artifact
     - name: Build the Docker image
       working-directory: PocAirportSystem/BoardingService
       run: docker build . --file Dockerfile --tag alessiacontenti/boardingservice:$(date +%s)
