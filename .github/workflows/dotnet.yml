@@ -22,7 +22,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore **/*.sln
     - name: Build
-      run: dotnet build **/*.sln --no-restore -o .
+      run: dotnet build **/*.sln --no-restore
     - name: Check
       run: ls
   docker:
