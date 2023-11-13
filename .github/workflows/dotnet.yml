@@ -38,6 +38,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: build-artifact
+        path: PocAirportSystem/BoardingService/bin/Debug/net7.0
     - name: Build the Docker image
       working-directory: PocAirportSystem/BoardingService
       run: docker build . --file Dockerfile --tag alessiacontenti/boardingservice:$(date +%s)
