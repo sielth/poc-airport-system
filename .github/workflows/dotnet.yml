@@ -53,4 +53,4 @@ jobs:
         context: PocAirportSystem/BoardingService
         file: ./Dockerfile
         push: true
-        tags: alessiacontenti/boardingservice:$(date +%s)
+        tags: alessiacontenti/boardingservice:latest
