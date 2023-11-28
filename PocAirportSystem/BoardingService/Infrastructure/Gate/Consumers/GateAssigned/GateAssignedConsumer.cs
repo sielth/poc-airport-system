@@ -9,28 +9,39 @@ namespace BoardingService.Infrastructure.Gate.Consumers.GateAssigned;
 
 public class GateAssignedConsumer : IConsumer<GateAssignedEvent>
 {
-  private readonly ICheckinCaller _checkinCaller;
+  private readonly IHostEnvironment _environment;
   private readonly IBoardingService _boardingService;
   private readonly IBus _bus;
 
-  public GateAssignedConsumer(ICheckinCaller checkinCaller, IBoardingService boardingService, IBus bus)
+  public GateAssignedConsumer(IBoardingService boardingService, IBus bus, IHostEnvironment environment)
   {
-    _checkinCaller = checkinCaller;
     _boardingService = boardingService;
     _bus = bus;
+    _environment = environment;
   }
 
   public async Task Consume(ConsumeContext<GateAssignedEvent> context)
   {
-    var boarding = context.Message.Adapt<Models.BoardingAggregate.Boarding>();
-    await _boardingService.AddBoardingAsync(boarding);
-
-    await _bus.CreateDelayedMessageScheduler().SchedulePublish(context.Message.From.AddMinutes(-5),new CheckGateCommand
+    var boardingStart = context.Message.GateEndTime.AddMinutes(-60);
+    var boarding = new Boarding
     {
       FlightNr = context.Message.FlightNr,
       GateNr = context.Message.GateNr,
-      From = context.Message.From,
-      To = context.Message.To
+      From = boardingStart,
+      To = context.Message.GateEndTime
+    };
+    
+    await _boardingService.AddBoardingAsync(boarding);
+
+    var scheduledTime = boardingStart.AddMinutes(-5);
+    if (_environment.IsDevelopment()) scheduledTime = DateTime.Now.AddSeconds(5);
+    
+    await _bus.CreateDelayedMessageScheduler().SchedulePublish(scheduledTime, new CheckGateCommand
+    {
+      FlightNr = context.Message.FlightNr,
+      GateNr = context.Message.GateNr,
+      From = boardingStart,
+      To = context.Message.GateEndTime
     });
   }
 }

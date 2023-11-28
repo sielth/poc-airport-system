@@ -1,12 +1,12 @@
-using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using BoardingService.Infrastructure;
 using BoardingService.Infrastructure.Data;
-using FastEndpoints;
-using FastEndpoints.Swagger;
+using GateService.Infrastructure.Flight.Consumers.FlightCreated;
+using GateService.Infrastructure.Flight.Consumers.FlightUpdated;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 
@@ -40,18 +40,24 @@ builder.Services.AddMassTransit(configurator =>
   configurator.AddConsumers(assembly);
   configurator.UsingRabbitMq((context, factoryConfigurator) =>
   {
-    factoryConfigurator.Host("localhost", h =>
+    factoryConfigurator.Host("localhost", "ucl", h =>
     {
       h.Username("guest");
       h.Password("guest");
     });
+    // Flight Created
+    factoryConfigurator.ConfigureFlightCreated(context);
+
+    // Flight Updated
+    factoryConfigurator.ConfigureFlightUpdated(context);
+    
     factoryConfigurator.UseDelayedMessageScheduler();
     factoryConfigurator.ConfigureEndpoints(context);
   });
 });
 
-builder.Services.AddFastEndpoints();
-builder.Services.SwaggerDocument();
+// builder.Services.AddFastEndpoints();
+// builder.Services.SwaggerDocument();
 
 builder.Services.AddControllers();
 
@@ -76,21 +82,33 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-  app.UseDefaultExceptionHandler(); // from FastEndpoints
+  // app.UseDefaultExceptionHandler(); // from FastEndpoints
   app.UseHsts();
 }
-
-app.UseFastEndpoints();
-app.UseSwaggerGen();
+// app.UseFastEndpoints();
+// app.UseSwaggerGen();
 
 app.UseAuthorization();
 app.MapControllers();
 
-// if (app.Environment.IsDevelopment())
-// {
-//   // Seed Database
-//   using var scope = app.Services.CreateScope();
-//   await SeedData.Initialize(scope.ServiceProvider);
-// }
+if (app.Environment.IsDevelopment())
+{
+  // Seed Database
+  // using var scope = app.Services.CreateScope();
+  // await SeedData.Initialize(scope.ServiceProvider);
+}
 
 app.Run();
+// get travel (listen to FlightJourney routing key Journey.Created.Boarding)
+// republish the message one hour and a half before departure
+// check flight is still in time (call db)
+// if yes
+// assign gate one hour before departure => gate assigned event 
+// delete evt. delays
+// if not, republish
+// max 20 gates
+
+// if flight is delayed (listen to routing key Journey.Updated.Boarding)
+// if gate has been assigned to flight
+// make gate avaliable again, schedule publish one and a half hour before
+// if gate has not been assigned yet, save/update flight in db
