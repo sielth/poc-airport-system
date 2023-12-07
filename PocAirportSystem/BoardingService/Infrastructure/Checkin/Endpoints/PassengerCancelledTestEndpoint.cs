@@ -10,7 +10,7 @@ public class PassengerCancelledTestEndpoint : Endpoint<CancelPassengerRequest>
   
   public override void Configure()
   {
-    Get("/api/test/CancelPassenger");
+    Post("/api/test/CancelPassenger");
     AllowAnonymous();
   }
 
