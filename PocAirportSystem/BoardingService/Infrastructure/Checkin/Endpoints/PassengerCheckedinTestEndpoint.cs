@@ -10,7 +10,7 @@ public class PassengerCheckedInTestEndpoint : Endpoint<CheckinPassengerRequest>
   
   public override void Configure()
   {
-    Get("/api/test/CheckinPassenger");
+    Post("/api/test/CheckinPassenger");
     AllowAnonymous();
   }
 
